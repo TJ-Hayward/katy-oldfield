@@ -11,6 +11,7 @@
     "@contentful/rich-text-react-renderer": "^15.11.1",
     "babel-preset-next": "^1.4.0",
     "contentful": "^9.1.7",
+    "netlify-cli": "^9.4.0",
     "netlify-identity-widget": "^1.9.2",
     "next": "12.0.10",
     "react": "17.0.2",
