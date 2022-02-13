@@ -1,3 +1,4 @@
+import React from "react";
 import { createClient } from "contentful";
 import MiniProjectContainer from "../../components/ProjectOverview/MiniProjects";
 

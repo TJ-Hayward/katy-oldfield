@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import React from "react";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
