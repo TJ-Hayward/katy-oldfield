@@ -9,6 +9,9 @@ h1 {
 h2 {
   font: normal normal normal 40px/47px Yeseva One;
 }
+h3 {
+  font: normal normal bold 16px/22px OpenSans;
+}
 
 a {
   color: inherit;

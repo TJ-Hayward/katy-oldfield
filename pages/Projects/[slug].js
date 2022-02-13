@@ -1,5 +1,9 @@
 import { createClient } from "contentful";
 import React from "react";
+import HeroSection from "../../components/ProjectPage/HeroContainer";
+import ProjectDetails from "../../components/ProjectPage/ProjectDetails";
+import BigImages from "../../components/ProjectPage/BigImages";
+import Testimonials from "../../components/ProjectPage/Testimonials";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -33,5 +37,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function FullProject({ project }) {
-  return <div>{console.log(project)}hey</div>;
+  return (
+    <div>
+      {console.log(project)}
+      <HeroSection project={project} />
+      <ProjectDetails project={project} />
+      <BigImages project={project} />
+      <Testimonials project={project} />
+    </div>
+  );
 }
