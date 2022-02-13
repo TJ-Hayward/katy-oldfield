@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import TopSection from "../components/HomePage/TopSection";
 import AboutMe from "../components/HomePage/AboutMe";
+import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -11,11 +12,13 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const res = await client.getEntries({ content_type: "homeHero" });
+  const Home = await client.getEntries({ content_type: "homeHero" });
+  const Projects = await client.getEntries({ content_type: "miniProjects" });
 
   return {
     props: {
-      homeStuff: res.items,
+      homeStuff: Home.items,
+      miniProject: Projects.items,
     },
   };
 }
@@ -27,7 +30,7 @@ const Container = styled.div`
   }
 `;
 
-const Home = ({ homeStuff }) => {
+const Home = ({ homeStuff, miniProject }) => {
   const [colour, setColour] = useState("white");
   const colourCheck = () => {
     console.log(window.scrollY);
@@ -46,7 +49,7 @@ const Home = ({ homeStuff }) => {
       colourCheck();
     });
   }, []);
-  console.log(homeStuff);
+  console.log(miniProject);
   return (
     <div className="globalTheme">
       {homeStuff.map((homeStuff) => (
@@ -54,6 +57,9 @@ const Home = ({ homeStuff }) => {
           <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />
           <AboutMe key={homeStuff.sys.id} homeStuff={homeStuff} />
         </>
+      ))}
+      {miniProject.map((project) => (
+        <MiniProjectContainer key={project.sys.id} project={project} />
       ))}
     </div>
   );
