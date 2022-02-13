@@ -49,7 +49,6 @@ const Home = ({ homeStuff, miniProject }) => {
       colourCheck();
     });
   }, []);
-  console.log(miniProject);
   return (
     <div className="globalTheme">
       {homeStuff.map((homeStuff) => (

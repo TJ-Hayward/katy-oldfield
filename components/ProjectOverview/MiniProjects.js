@@ -5,7 +5,6 @@ export default function MiniProjectContainer({ project }) {
   const projectData = project.fields;
   return (
     <div>
-      {console.log(projectData.image.fields)}
       <h2>
         <a href={`/projects/${projectData.slug}`}>{projectData.name}</a>
       </h2>

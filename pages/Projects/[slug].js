@@ -39,7 +39,6 @@ export async function getStaticProps({ params }) {
 export default function FullProject({ project }) {
   return (
     <div>
-      {console.log(project)}
       <HeroSection project={project} />
       <ProjectDetails project={project} />
       <BigImages project={project} />

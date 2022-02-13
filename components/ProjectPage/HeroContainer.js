@@ -15,7 +15,6 @@ export default function HeroSection({ project }) {
       <h1>{projectData.title}</h1>
       <h3> {projectData.role}</h3>
       <div> {projectData.mainParagraph}</div>
-      {console.log(projectData)}
     </div>
   );
 }
