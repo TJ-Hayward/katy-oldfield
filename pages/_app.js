@@ -1,10 +1,13 @@
 import "../styles/globals.css";
 import { AuthContextProvider } from "../stores/authContext";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
     <AuthContextProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </AuthContextProvider>
   );
 }

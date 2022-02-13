@@ -2,6 +2,53 @@
   font-family: "Yeseva One";
   font-style: normal;
   font-display: swap;
-  src: local("YesevaOne-Regular"),
-    url(/fonts/YesevaOne-Regular.ttf) format("truetype");
+  src: url(/fonts/YesevaOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/OpenSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: lighter;
+  font-display: swap;
+  src: local("OpenSans-Light"),
+    url(/fonts/OpenSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: medium;
+  font-display: swap;
+  src: local("OpenSans-Medium"),
+    url(/fonts/OpenSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-display: swap;
+  src: local("OpenSans-Regular"),
+    url(/fonts/OpenSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+  src: local("OpenSans-BoldItalic"),
+    url(/fonts/OpenSans-BoldItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("OpenSans-Bold"), url(/fonts/OpenSans-Bold.ttf) format("truetype");
 }

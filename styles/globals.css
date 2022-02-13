@@ -1,8 +1,13 @@
+@import "./fonts.css";
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Yeseva One;
+  font: normal normal normal 16px/22px OpenSans;
+}
+h1 {
+  font: normal normal normal 100px/115px Yeseva One;
+}
+h2 {
+  font: normal normal normal 40px/47px Yeseva One;
 }
 
 a {
