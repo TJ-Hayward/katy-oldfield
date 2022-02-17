@@ -31,32 +31,32 @@ const Container = styled.div`
 `;
 
 const Home = ({ homeStuff, miniProject }) => {
-  const [colour, setColour] = useState("white");
-  const colourCheck = () => {
-    console.log(window.scrollY);
-    if (window.scrollY > 500 && window.scrollY < 1000) {
-      setColour("yellow");
-    } else if (window.scrollY > 1000 && window.scrollY < 1200) {
-      setColour("blue");
-      console.log(window.scrollY);
-    } else {
-      setColour("white");
-    }
-  };
-  useEffect(() => {
-    colourCheck();
-    window.addEventListener("scroll", () => {
-      colourCheck();
-    });
-  }, []);
+  // const [colour, setColour] = useState("white");
+  // const colourCheck = () => {
+  //   console.log(window.scrollY);
+  //   if (window.scrollY > 500 && window.scrollY < 1000) {
+  //     setColour("yellow");
+  //   } else if (window.scrollY > 1000 && window.scrollY < 1200) {
+  //     setColour("blue");
+  //     console.log(window.scrollY);
+  //   } else {
+  //     setColour("white");
+  //   }
+  // };
+  // useEffect(() => {
+  //   colourCheck();
+  //   window.addEventListener("scroll", () => {
+  //     colourCheck();
+  //   });
+  // }, []);
   return (
     <div className="globalTheme">
-      {homeStuff.map((homeStuff) => (
+      {/* {homeStuff.map((homeStuff) => (
         <>
           <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />
           <AboutMe key={homeStuff.sys.id} homeStuff={homeStuff} />
         </>
-      ))}
+      ))} */}
       {miniProject.map((project) => (
         <MiniProjectContainer key={project.sys.id} project={project} />
       ))}

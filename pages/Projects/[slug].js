@@ -4,6 +4,8 @@ import HeroSection from "../../components/ProjectPage/HeroContainer";
 import ProjectDetails from "../../components/ProjectPage/ProjectDetails";
 import BigImages from "../../components/ProjectPage/BigImages";
 import Testimonials from "../../components/ProjectPage/Testimonials";
+import { useRouter } from "next/router";
+import Login from "../../components/login/login";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -36,7 +38,15 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function FullProject({ project }) {
+export default function FullProject({ project, hasReadPermission }) {
+  const router = useRouter();
+
+  if (!hasReadPermission) {
+    return <Login redirectPath={router.asPath} />;
+  }
+  if (!hasReadPermission) {
+    return <div>Access denied.</div>;
+  }
   return (
     <div>
       <HeroSection project={project} />
