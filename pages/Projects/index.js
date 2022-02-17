@@ -20,14 +20,14 @@ export async function getStaticProps() {
 }
 
 const ProjectLand = ({ miniProject, hasReadPermission }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
-  if (!hasReadPermission) {
-    return <Login redirectPath={router.asPath} />;
-  }
-  if (!hasReadPermission) {
-    return <div>Access denied.</div>;
-  }
+  // if (!hasReadPermission) {
+  //   return <Login redirectPath={router.asPath} />;
+  // }
+  // if (!hasReadPermission) {
+  //   return <div>Access denied.</div>;
+  // }
   return (
     <div className="globalTheme">
       <h1>Projects</h1>

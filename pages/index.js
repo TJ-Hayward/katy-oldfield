@@ -5,6 +5,8 @@ import Link from "next/link";
 import TopSection from "../components/HomePage/TopSection";
 import AboutMe from "../components/HomePage/AboutMe";
 import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
+import { useRouter } from "next/router";
+import Login from "../components/login/login";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -30,7 +32,7 @@ const Container = styled.div`
   }
 `;
 
-const Home = ({ homeStuff, miniProject }) => {
+const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
   // const [colour, setColour] = useState("white");
   // const colourCheck = () => {
   //   console.log(window.scrollY);
@@ -49,6 +51,14 @@ const Home = ({ homeStuff, miniProject }) => {
   //     colourCheck();
   //   });
   // }, []);
+  const router = useRouter();
+
+  if (!hasReadPermission) {
+    return <Login redirectPath={router.asPath} />;
+  }
+  if (!hasReadPermission) {
+    return <div>Access denied.</div>;
+  }
   return (
     <div className="globalTheme">
       {/* {homeStuff.map((homeStuff) => (
