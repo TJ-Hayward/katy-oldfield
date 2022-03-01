@@ -27,6 +27,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li onClick={login}> Login/Signup</li>
+          {}
         </ul>
       </Row>
     </StyledHeader>

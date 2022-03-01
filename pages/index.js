@@ -6,6 +6,8 @@ import TopSection from "../components/HomePage/TopSection";
 import AboutMe from "../components/HomePage/AboutMe";
 import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
+import AuthContext from "../stores/authContext";
+import { useContext } from "react";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -31,7 +33,8 @@ const Container = styled.div`
   }
 `;
 
-const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
+export default function Home({ homeStuff, miniProject, hasReadPermission }) {
+  const { user, login, loggedIn } = useContext(AuthContext);
   // const [colour, setColour] = useState("white");
   // const colourCheck = () => {
   //   console.log(window.scrollY);
@@ -60,7 +63,39 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
   // }
   // const router = useRouter();
   // setTimeout(() => router.replace("/login"), 2000);
+  if (loggedIn) {
+    const router = useRouter();
+    setTimeout(() => router.replace("/projects"), 2000);
+  }
 
+  if (loggedIn) {
+    return (
+      <div className="globalTheme">
+        <div
+          style={{
+            height: "150%",
+            width: "100%",
+            backgroundColor: "#0E431D",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "600px",
+              lineHeight: "600px",
+              textAlign: "center",
+              height: "100%",
+              width: "100%",
+              marginBlock: "0px",
+              backgroundColor: "#0E431D",
+              color: "white",
+            }}
+          >
+            OK
+          </h1>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="globalTheme">
       <div
@@ -70,26 +105,34 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
           backgroundColor: "#0E431D",
         }}
       >
-        <h1
+        <div
           style={{
-            fontSize: "600px",
-            lineHeight: "600px",
-            textAlign: "center",
-            height: "100%",
             width: "100%",
-            marginBlock: "0px",
-            backgroundColor: "#0E431D",
-            color: "white",
+            height: "100%",
           }}
         >
-          KO
-        </h1>
+          <yesevaTitle
+            style={{
+              fontSize: "600px",
+              lineHeight: "600px",
+              textAlign: "center",
+              height: "100%",
+              width: "100%",
+              marginBlock: "0px",
+              backgroundColor: "#0E431D",
+              color: "white",
+            }}
+          >
+            {console.log(loggedIn)}
+            {console.log(user)}
+            KO
+          </yesevaTitle>
+        </div>
+        <button onClick={login}> Login/Signup </button>
       </div>
     </div>
   );
-};
-
-export default Home;
+}
 
 {
   /* <div className="globalTheme">
