@@ -63,9 +63,9 @@ export default function Home({ homeStuff, miniProject, hasReadPermission }) {
   // }
   // const router = useRouter();
   // setTimeout(() => router.replace("/login"), 2000);
+  const router = useRouter();
   if (loggedIn) {
-    const router = useRouter();
-    setTimeout(() => router.replace("/projects"), 2000);
+    setTimeout(() => router.replace("/projects"), 500);
   }
 
   if (loggedIn) {
