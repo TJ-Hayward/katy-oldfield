@@ -4,7 +4,7 @@ export default function AboutMe({ homeStuff }) {
   const { aboutMeParagraph } = homeStuff.fields;
   return (
     <div>
-      <h2>About me</h2>
+      <yeseva40N>About me</yeseva40N>
       <div> {aboutMeParagraph}</div>
     </div>
   );

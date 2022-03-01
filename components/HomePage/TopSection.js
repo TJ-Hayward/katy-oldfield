@@ -5,7 +5,7 @@ export default function TopSection({ homeStuff }) {
   const { title, introduction, heroImage } = homeStuff.fields;
   return (
     <div>
-      <h1>{title}</h1>
+      <yesevaTitle>{title}</yesevaTitle>
       <div> {introduction}</div>
       <Image
         src={"https:" + heroImage.fields.file.url}

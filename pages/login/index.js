@@ -32,7 +32,7 @@ export default function LoginPage({ hasReadPermission }) {
       <Head>
         <title>Login</title>
       </Head>
-      <Login redirectPath="/" />
+      <Login redirectPath="/ok" />
     </>
   );
 }

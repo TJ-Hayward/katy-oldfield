@@ -5,9 +5,9 @@ export default function MiniProjectContainer({ project }) {
   const projectData = project.fields;
   return (
     <div>
-      <h2>
+      <yeseva40N>
         <a href={`/projects/${projectData.slug}`}>{projectData.name}</a>
-      </h2>
+      </yeseva40N>
       <div> {projectData.objectiveOfProject}</div>
 
       <Image
@@ -17,6 +17,7 @@ export default function MiniProjectContainer({ project }) {
         width={projectData.image.fields.file.details.image.width}
         className="backImage"
       />
+      {console.log(projectData.slug)}
     </div>
   );
 }

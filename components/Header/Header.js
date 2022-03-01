@@ -5,16 +5,11 @@ import { Row, Col, Container } from "react-bootstrap";
 const Navbar = () => {
   return (
     <StyledHeader>
-      <div className="header">
+      <Row fluid className="header">
         <ul>
           <li className="header-logo">
             <Link href="/">
-              <h4>Katy Oldfield</h4>
-            </Link>
-          </li>
-          <li className="header-pages">
-            <Link href="/projects">
-              <a>Projects</a>
+              <yeseva40>Katy Oldfield</yeseva40>
             </Link>
           </li>
           <li className="header-pages">
@@ -22,8 +17,13 @@ const Navbar = () => {
               <a>About</a>
             </Link>
           </li>
+          <li className="header-pages">
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
+          </li>
         </ul>
-      </div>
+      </Row>
     </StyledHeader>
   );
 };

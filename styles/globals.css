@@ -5,19 +5,25 @@ body {
   font: normal normal normal 16px/22px OpenSans;
   margin: 0;
 }
-h1 {
+yesevaTitle {
   font: normal normal normal 100px/115px Yeseva One;
 }
-h2 {
+yeseva40N {
   font: normal normal normal 40px/47px Yeseva One;
 }
-h3 {
+openSansSmall {
   font: normal normal bold 16px/22px OpenSans;
 }
-h4 {
+yeseva40 {
   font: normal normal normal 40px Yeseva One;
   letter-spacing: -1.2px;
   margin: 0;
+}
+ibmSemi {
+  font: normal normal 600 100px/129px IBMPlexSans;
+}
+ibmSmall {
+  font: normal normal medium 40px/52px IBMPlexSans;
 }
 
 a {
@@ -25,7 +31,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+a:hover {
+  font: normal normal normal 16px/22px OpenSans;
+  color: inherit;
+  text-decoration: none;
+}
 * {
   box-sizing: border-box;
 }
@@ -55,6 +65,14 @@ li a {
 
 li a:hover {
   text-decoration: underline;
+}
+.row {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* body,

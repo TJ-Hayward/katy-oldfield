@@ -2,11 +2,11 @@ import { createClient } from "contentful";
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import TopSection from "../components/HomePage/TopSection";
-import AboutMe from "../components/HomePage/AboutMe";
-import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
+import TopSection from "../../components/HomePage/TopSection";
+import AboutMe from "../../components/HomePage/AboutMe";
+import MiniProjectContainer from "../../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
-import Login from "../components/login/login";
+import Login from "../../components/login/login";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -60,7 +60,7 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
   //   return <div>Access denied.</div>;
   // }
   const router = useRouter();
-  setTimeout(() => router.replace("/login"), 2000);
+  setTimeout(() => router.replace("/projects"), 2000);
 
   return (
     <div className="globalTheme">
@@ -83,7 +83,7 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
             color: "white",
           }}
         >
-          KO
+          OK
         </h1>
       </div>
     </div>
@@ -91,18 +91,3 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
 };
 
 export default Home;
-
-{
-  /* <div className="globalTheme">
-{homeStuff.map((homeStuff) => (
-  <>
-    <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />
-    <AboutMe key={homeStuff.sys.id} homeStuff={homeStuff} />
-  </>
-))}
-
-{miniProject.map((project) => (
-  <MiniProjectContainer key={project.sys.id} project={project} />
-))}
-</div> */
-}

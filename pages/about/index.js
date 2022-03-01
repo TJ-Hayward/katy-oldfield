@@ -2,11 +2,12 @@ import { createClient } from "contentful";
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import TopSection from "../components/HomePage/TopSection";
-import AboutMe from "../components/HomePage/AboutMe";
-import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
+import TopSection from "../../components/HomePage/TopSection";
+import AboutMe from "../../components/HomePage/AboutMe";
+import MiniProjectContainer from "../../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
-import Login from "../components/login/login";
+import Login from "../../components/login/login";
+import Navbar from "../../components/Header/Header";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -59,50 +60,22 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
   // if (!hasReadPermission) {
   //   return <div>Access denied.</div>;
   // }
-  const router = useRouter();
-  setTimeout(() => router.replace("/login"), 2000);
 
   return (
     <div className="globalTheme">
-      <div
-        style={{
-          height: "150%",
-          width: "100%",
-          backgroundColor: "#0E431D",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "600px",
-            lineHeight: "600px",
-            textAlign: "center",
-            height: "100%",
-            width: "100%",
-            marginBlock: "0px",
-            backgroundColor: "#0E431D",
-            color: "white",
-          }}
-        >
-          KO
-        </h1>
-      </div>
+      <Navbar />
+      {homeStuff.map((homeStuff) => (
+        <>
+          <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />
+          <AboutMe key={homeStuff.sys.id} homeStuff={homeStuff} />
+        </>
+      ))}
+
+      {miniProject.map((project) => (
+        <MiniProjectContainer key={project.sys.id} project={project} />
+      ))}
     </div>
   );
 };
 
 export default Home;
-
-{
-  /* <div className="globalTheme">
-{homeStuff.map((homeStuff) => (
-  <>
-    <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />
-    <AboutMe key={homeStuff.sys.id} homeStuff={homeStuff} />
-  </>
-))}
-
-{miniProject.map((project) => (
-  <MiniProjectContainer key={project.sys.id} project={project} />
-))}
-</div> */
-}
