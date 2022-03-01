@@ -6,7 +6,6 @@ import TopSection from "../components/HomePage/TopSection";
 import AboutMe from "../components/HomePage/AboutMe";
 import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
-import Login from "../components/login/login";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -59,8 +58,8 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
   // if (!hasReadPermission) {
   //   return <div>Access denied.</div>;
   // }
-  const router = useRouter();
-  setTimeout(() => router.replace("/login"), 2000);
+  // const router = useRouter();
+  // setTimeout(() => router.replace("/login"), 2000);
 
   return (
     <div className="globalTheme">

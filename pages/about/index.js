@@ -6,7 +6,6 @@ import TopSection from "../../components/HomePage/TopSection";
 import AboutMe from "../../components/HomePage/AboutMe";
 import MiniProjectContainer from "../../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
-import Login from "../../components/login/login";
 import Navbar from "../../components/Header/Header";
 
 export async function getStaticProps() {
