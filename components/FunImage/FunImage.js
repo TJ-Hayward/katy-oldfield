@@ -11,7 +11,7 @@ const ImageSizer = createContext({
   widthD: "16.6667%",
 });
 
-const FunImage = () => {
+const FunImage = ({ mainImages }) => {
   const [activeImage, setActiveImage] = useState("A");
   const [widthA, setWidthA] = useState("62.5%");
   const [widthB, setWidthB] = useState("12.5%");
@@ -24,34 +24,31 @@ const FunImage = () => {
       setWidthB("12.5%");
       setWidthC("12.5%");
       setWidthD("12.5%");
-      console.log(widthA);
     } else if (activeImage == "B") {
       setWidthA("12.5%");
       setWidthB("62.5%");
       setWidthC("12.5%");
       setWidthD("12.5%");
-      console.log(widthB);
     } else if (activeImage == "C") {
       setWidthA("12.5%");
       setWidthB("12.5%");
       setWidthC("62.5%");
       setWidthD("12.5%");
-      console.log(widthC);
     } else if (activeImage == "D") {
       setWidthA("12.5%");
       setWidthB("12.5%");
       setWidthC("12.5%");
       setWidthD("62.5%");
-      console.log(widthD);
     } else {
       setWidthA("62.5%");
       setWidthB("12.5%");
       setWidthC("12.5%");
       setWidthD("12.5%");
-      console.log(widthA, "FallBack");
     }
   }, [activeImage]);
 
+  const { projectImage1, projectImage2, projectImage3, projectImage4 } =
+    mainImages.fields;
   return (
     <>
       <ImageSizer.Provider>
@@ -65,10 +62,13 @@ const FunImage = () => {
                   className="image"
                   loading="lazy"
                   data-lazy="true"
-                  alt="empty rectangle"
-                  src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
+                  // alt="empty rectangle"
+                  // src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
+                  src={"https:" + projectImage1.fields.file.url}
+                  alt={projectImage1.title}
                 />
               </Link>
+
               {activeImage === "A" && (
                 <opensanssmall
                   className="centered"
@@ -86,8 +86,8 @@ const FunImage = () => {
                   className="image"
                   loading="lazy"
                   data-lazy="true"
-                  alt="empty rectangle"
-                  src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
+                  src={"https:" + projectImage2.fields.file.url}
+                  alt={projectImage2.title}
                 />
               </Link>
               {activeImage === "B" && (
@@ -107,8 +107,8 @@ const FunImage = () => {
                   className="image"
                   loading="lazy"
                   data-lazy="true"
-                  alt="empty rectangle"
-                  src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
+                  src={"https:" + projectImage3.fields.file.url}
+                  alt={projectImage3.title}
                 />
               </Link>
               {activeImage === "C" && (
@@ -121,7 +121,7 @@ const FunImage = () => {
                   Compass PLC
                 </opensanssmall>
               )}
-              <Link href="/projects/st-andrews">
+              <Link href="/projects/st-andrews-links">
                 <Image
                   onMouseOver={() => setActiveImage("D")}
                   width={widthD}
@@ -129,8 +129,8 @@ const FunImage = () => {
                   className="image"
                   loading="lazy"
                   data-lazy="true"
-                  alt="empty rectangle"
-                  src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
+                  src={"https:" + projectImage4.fields.file.url}
+                  alt={projectImage4.title}
                 />
               </Link>
               {activeImage === "D" && (

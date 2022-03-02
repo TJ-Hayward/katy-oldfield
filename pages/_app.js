@@ -9,8 +9,10 @@ import { AuthContextProvider } from "../stores/authContext";
 function MyApp({ Component, pageProps }) {
   return (
     <AuthContextProvider>
-      {/* <Navbar /> */}
-      <Component {...pageProps} />
+      <div className="globalTheme">
+        {/* <Navbar /> */}
+        <Component {...pageProps} />
+      </div>
     </AuthContextProvider>
   );
 }

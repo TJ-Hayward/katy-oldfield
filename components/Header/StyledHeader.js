@@ -4,7 +4,7 @@ export const StyledHeader = styled.div`
   @media only screen and (max-width: 768px) {
     .header-logo {
       float: left;
-      letter-spacing: -1.2px;
+      /* letter-spacing: -1.2px; */
       font-size: 20px;
     }
     padding: 0rem 0.75rem 0rem 0.75rem;
@@ -34,8 +34,16 @@ export const StyledHeader = styled.div`
   .header-pages {
     text-align: right;
     float: right;
-    margin-left: 64px;
     line-height: 40px;
+    @media only screen and (max-width: 576px) {
+      margin-left: 2rem;
+    }
+    @media only screen and (min-width: 576px) {
+      margin-left: 4rem;
+    }
+  }
+  .header_link {
+    color: black;
   }
   ul {
     list-style-type: none;

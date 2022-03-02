@@ -9,8 +9,6 @@ export default function BigImages({ project }) {
   const projectData = project.fields;
   return (
     <>
-      {console.log(projectData)}
-
       <StyledMarginWraperB>
         <StyledBigImages>
           {projectData.fullImage1.fields.file.url.includes(

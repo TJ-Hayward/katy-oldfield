@@ -8,6 +8,8 @@ import MiniProjectContainer from "../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
 import AuthContext from "../stores/authContext";
 import { useContext } from "react";
+import { Row } from "react-bootstrap";
+import { StyledLanding } from "../components/styles/StyledLanding";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -26,10 +28,13 @@ export async function getStaticProps() {
   };
 }
 const Container = styled.div`
-  .holder {
+  /* .holder {
     text-align: center;
     padding-top: 500px;
     padding-bottom: 500px;
+  } */
+  .button {
+    background-color: white;
   }
 `;
 
@@ -53,84 +58,33 @@ export default function Home({ homeStuff, miniProject, hasReadPermission }) {
   //     colourCheck();
   //   });
   // }, []);
-  // const router = useRouter();
 
-  // if (!hasReadPermission) {
-  //   return <Login redirectPath={router.asPath} />;
-  // }
-  // if (!hasReadPermission) {
-  //   return <div>Access denied.</div>;
-  // }
-  // const router = useRouter();
-  // setTimeout(() => router.replace("/login"), 2000);
   const router = useRouter();
   if (loggedIn) {
     setTimeout(() => router.replace("/projects"), 500);
   }
-
   if (loggedIn) {
     return (
-      <div className="globalTheme">
-        <div
-          style={{
-            height: "150%",
-            width: "100%",
-            backgroundColor: "#0E431D",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "600px",
-              lineHeight: "600px",
-              textAlign: "center",
-              height: "100%",
-              width: "100%",
-              marginBlock: "0px",
-              backgroundColor: "#0E431D",
-              color: "white",
-            }}
-          >
-            OK
-          </h1>
+      <StyledLanding>
+        <div className="fun_container">
+          <yesevaTitle className="contents">OK</yesevaTitle>
         </div>
-      </div>
+      </StyledLanding>
     );
   }
   return (
-    <div className="globalTheme">
-      <div
-        style={{
-          height: "150%",
-          width: "100%",
-          backgroundColor: "#0E431D",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <yesevaTitle
-            style={{
-              fontSize: "600px",
-              lineHeight: "600px",
-              textAlign: "center",
-              height: "100%",
-              width: "100%",
-              marginBlock: "0px",
-              backgroundColor: "#0E431D",
-              color: "white",
-            }}
-          >
-            {console.log(loggedIn)}
-            {console.log(user)}
-            KO
-          </yesevaTitle>
-        </div>
-        <button onClick={login}> Login/Signup </button>
+    <StyledLanding>
+      <div className="fun_container">
+        <Row>
+          <yesevaTitle className="contents">KO</yesevaTitle>
+        </Row>
+        <Row>
+          <button onClick={login}>
+            <a>Login</a>
+          </button>
+        </Row>
       </div>
-    </div>
+    </StyledLanding>
   );
 }
 

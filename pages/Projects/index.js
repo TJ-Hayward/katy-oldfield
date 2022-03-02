@@ -17,13 +17,11 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const Home = await client.getEntries({ content_type: "homeHero" });
-  const Projects = await client.getEntries({ content_type: "miniProjects" });
+  const Home = await client.getEntries({ content_type: "projectMainImages" });
 
   return {
     props: {
-      homeStuff: Home.items,
-      miniProject: Projects.items,
+      mainImages: Home.items,
     },
   };
 }
@@ -35,7 +33,7 @@ const Container = styled.div`
   }
 `;
 
-const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
+const Home = ({ mainImages }) => {
   // const [colour, setColour] = useState("white");
   // const colourCheck = () => {
   //   console.log(window.scrollY);
@@ -64,10 +62,14 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
   // }
 
   return (
-    <div className="globalTheme">
-      <Navbar />
-      <FunImage />
-    </div>
+    <>
+      {mainImages.map((mainImages) => (
+        <>
+          <Navbar />
+          <FunImage key={mainImages.sys.id} mainImages={mainImages} />
+        </>
+      ))}
+    </>
   );
 };
 

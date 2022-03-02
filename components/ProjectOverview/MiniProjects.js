@@ -17,7 +17,6 @@ export default function MiniProjectContainer({ project }) {
         width={projectData.image.fields.file.details.image.width}
         className="backImage"
       />
-      {console.log(projectData.slug)}
     </div>
   );
 }

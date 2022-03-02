@@ -2,6 +2,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   font: normal normal normal 16px/22px OpenSans;
   margin: 0;
 }
@@ -20,7 +21,7 @@ yeseva40 {
   margin: 0;
 }
 ibmSemi {
-  font: normal normal 600 80px/129px IBMPlexSans;
+  font: normal normal 600 80px/80px IBMPlexSans;
 }
 ibmSmall {
   font: normal normal 32px/40px IBMPlexSans;
