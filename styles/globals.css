@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 yesevaTitle {
-  font: normal normal normal 100px/115px Yeseva One;
+  font: normal normal normal 80px/115px Yeseva One;
 }
 yeseva40N {
   font: normal normal normal 40px/47px Yeseva One;
@@ -20,10 +20,10 @@ yeseva40 {
   margin: 0;
 }
 ibmSemi {
-  font: normal normal 600 100px/129px IBMPlexSans;
+  font: normal normal 600 80px/129px IBMPlexSans;
 }
 ibmSmall {
-  font: normal normal medium 40px/52px IBMPlexSans;
+  font: normal normal 32px/40px IBMPlexSans;
 }
 
 a {
@@ -73,6 +73,10 @@ li a:hover {
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+img {
+  height: auto;
+  width: 100% !important;
 }
 
 /* body,

@@ -26,7 +26,7 @@ const Navbar = () => {
               <a>Projects</a>
             </Link>
           </li>
-          <li onClick={login}> Login/Signup</li>
+          {/* <li onClick={login}> Login/Signup</li> */}
           {}
         </ul>
       </Row>

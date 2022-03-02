@@ -7,6 +7,8 @@ import AboutMe from "../../components/HomePage/AboutMe";
 import MiniProjectContainer from "../../components/ProjectOverview/MiniProjects";
 import { useRouter } from "next/router";
 import Navbar from "../../components/Header/Header";
+import { StyledMarginTop } from "../../components/MarginTop";
+import { ST } from "next/dist/shared/lib/utils";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -25,11 +27,11 @@ export async function getStaticProps() {
   };
 }
 const Container = styled.div`
-  .holder {
+  /* .holder {
     text-align: center;
     padding-top: 500px;
     padding-bottom: 500px;
-  }
+  } */
 `;
 
 const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
@@ -68,10 +70,6 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
           <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />
           <AboutMe key={homeStuff.sys.id} homeStuff={homeStuff} />
         </>
-      ))}
-
-      {miniProject.map((project) => (
-        <MiniProjectContainer key={project.sys.id} project={project} />
       ))}
     </div>
   );

@@ -69,21 +69,37 @@ const FunImage = () => {
                   src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
                 />
               </Link>
+              {activeImage === "A" && (
+                <opensanssmall
+                  className="centered"
+                  style={{
+                    left: " 31.25%",
+                  }}
+                >
+                  London Fashion Week
+                </opensanssmall>
+              )}
               <Link href="/projects/abercrombie-and-fitch">
-                <>
-                  <Image
-                    onMouseOver={() => setActiveImage("B")}
-                    width={widthB}
-                    className="image"
-                    loading="lazy"
-                    data-lazy="true"
-                    alt="empty rectangle"
-                    src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
-                  />
-                  {/* <opensanssmall>Abercrombie and fitch</opensanssmall> */}
-                </>
+                <Image
+                  onMouseOver={() => setActiveImage("B")}
+                  width={widthB}
+                  className="image"
+                  loading="lazy"
+                  data-lazy="true"
+                  alt="empty rectangle"
+                  src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
+                />
               </Link>
-
+              {activeImage === "B" && (
+                <opensanssmall
+                  className="centered"
+                  style={{
+                    left: " 43.75%",
+                  }}
+                >
+                  Abercrombie and fitch
+                </opensanssmall>
+              )}
               <Link href="/projects/compass-plc">
                 <Image
                   onMouseOver={() => setActiveImage("C")}
@@ -95,7 +111,16 @@ const FunImage = () => {
                   src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
                 />
               </Link>
-
+              {activeImage === "C" && (
+                <opensanssmall
+                  className="centered"
+                  style={{
+                    left: " 56.25%",
+                  }}
+                >
+                  Compass PLC
+                </opensanssmall>
+              )}
               <Link href="/projects/st-andrews">
                 <Image
                   onMouseOver={() => setActiveImage("D")}
@@ -108,6 +133,16 @@ const FunImage = () => {
                   src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
                 />
               </Link>
+              {activeImage === "D" && (
+                <opensanssmall
+                  className="centered"
+                  style={{
+                    left: " 68.75%",
+                  }}
+                >
+                  St Andrews
+                </opensanssmall>
+              )}
             </div>
           </div>
         </StyledFunImage>

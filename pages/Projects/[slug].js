@@ -7,6 +7,7 @@ import Testimonials from "../../components/ProjectPage/Testimonials";
 import { useRouter } from "next/router";
 import Navbar from "../../components/Header/Header";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { StyledMarginTop } from "../../components/MarginTop";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -43,7 +44,7 @@ export default function FullProject({ project, hasReadPermission }) {
   return (
     <>
       <Navbar />
-      <Parallax
+      {/* <Parallax
         id="parallax-main"
         pages={5.5}
         style={{ top: "flex-end", left: "0" }}
@@ -64,12 +65,12 @@ export default function FullProject({ project, hasReadPermission }) {
               justifyContent: "center",
               alignItems: "center",
             }}
-          >
-            <HeroSection project={project} />
-          </ParallaxLayer>
-          {/* 
+          > */}
+      <HeroSection project={project} />
+      {/* </ParallaxLayer> */}
+      {/* 
           <ProjectDetails project={project} /> */}
-          <ParallaxLayer
+      {/* <ParallaxLayer
             factor={3}
             offset={1.5}
             speed={0}
@@ -84,13 +85,13 @@ export default function FullProject({ project, hasReadPermission }) {
               justifyContent: "center",
               alignItems: "center",
             }}
-          >
-            <BigImages project={project} />
-          </ParallaxLayer>
+          > */}
+      <BigImages project={project} />
+      {/* </ParallaxLayer> */}
 
-          <Testimonials project={project} />
-        </div>
-      </Parallax>
+      <Testimonials project={project} />
+      {/* </div> */}
+      {/* </Parallax> */}
     </>
   );
 }
