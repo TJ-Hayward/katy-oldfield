@@ -67,7 +67,6 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
     <div className="globalTheme">
       <Navbar />
       <FunImage />
-      <ReactPlayer url="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/04.+SALT+Video+-+PLAY+ON+MUTE.mp4" />
     </div>
   );
 };

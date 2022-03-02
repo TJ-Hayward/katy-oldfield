@@ -20,6 +20,8 @@ export default function BigImages({ project }) {
               src={"https:" + projectData.fullImage1.fields.file.url}
               alt={projectData.fullImage1.fields.file.title}
               className="backImage"
+              width="100%"
+              height="auto"
             />
           ) : (
             <div className="backImage">
@@ -44,6 +46,8 @@ export default function BigImages({ project }) {
               src={"https:" + projectData.fullImage2.fields.file.url}
               alt={projectData.fullImage2.fields.file.title}
               className="backImage"
+              width="100%"
+              height="auto"
             />
           ) : (
             <div className="backImage">
@@ -68,6 +72,8 @@ export default function BigImages({ project }) {
               src={"https:" + projectData.fullImage3.fields.file.url}
               alt={projectData.fullImage1.fields.file.title}
               className="backImage"
+              width="100%"
+              height="auto"
             />
           ) : (
             <div className="backImage">
@@ -92,6 +98,8 @@ export default function BigImages({ project }) {
               src={"https:" + projectData.fullImage4.fields.file.url}
               alt={projectData.fullImage4.fields.file.title}
               className="backImage"
+              width="100%"
+              height="auto"
             />
           ) : (
             <div className="backImage">
@@ -116,6 +124,8 @@ export default function BigImages({ project }) {
               src={"https:" + projectData.fullImage5.fields.file.url}
               alt={projectData.fullImage5.fields.file.title}
               className="backImage"
+              width="100%"
+              height="auto"
             />
           ) : (
             <div className="backImage">
