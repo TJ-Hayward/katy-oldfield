@@ -11,135 +11,261 @@ export default function BigImages({ project }) {
     <>
       <StyledMarginWraperB>
         <StyledBigImages>
-          {projectData.fullImage1.fields.file.url.includes(
-            "images.ctfassets.net"
-          ) ? (
-            <img
-              src={"https:" + projectData.fullImage1.fields.file.url}
-              alt={projectData.fullImage1.fields.file.title}
-              className="backImage"
-              width="100%"
-              height="auto"
-            />
+          {projectData.fullImage1 ? (
+            <>
+              {projectData.fullImage1.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage1.fields.file.url}
+                  alt={projectData.fullImage1.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage1.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
           ) : (
-            <div className="backImage">
-              <ReactPlayer
-                className="react-player"
-                url={"https:" + projectData.fullImage1.fields.file.url}
-                width="100%"
-                height="auto"
-                playing="playing"
-                // controls={true}
-                playbackRate={2}
-                volume={0}
-                muted={true}
-                loop={true}
-              />
-            </div>
+            <></>
           )}
-          {projectData.fullImage2.fields.file.url.includes(
-            "images.ctfassets.net"
-          ) ? (
-            <img
-              src={"https:" + projectData.fullImage2.fields.file.url}
-              alt={projectData.fullImage2.fields.file.title}
-              className="backImage"
-              width="100%"
-              height="auto"
-            />
+          {projectData.fullImage2 ? (
+            <>
+              {projectData.fullImage2.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage2.fields.file.url}
+                  alt={projectData.fullImage2.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage2.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
           ) : (
-            <div className="backImage">
-              <ReactPlayer
-                className="react-player"
-                url={"https:" + projectData.fullImage2.fields.file.url}
-                width="100%"
-                height="auto"
-                playing="playing"
-                // controls={true}
-                playbackRate={2}
-                volume={0}
-                muted={true}
-                loop={true}
-              />
-            </div>
+            <></>
           )}
-          {projectData.fullImage3.fields.file.url.includes(
-            "images.ctfassets.net"
-          ) ? (
-            <img
-              src={"https:" + projectData.fullImage3.fields.file.url}
-              alt={projectData.fullImage1.fields.file.title}
-              className="backImage"
-              width="100%"
-              height="auto"
-            />
+          {projectData.fullImage3 ? (
+            <>
+              {projectData.fullImage3.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage3.fields.file.url}
+                  alt={projectData.fullImage3.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage3.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
           ) : (
-            <div className="backImage">
-              <ReactPlayer
-                className="react-player"
-                url={"https:" + projectData.fullImage3.fields.file.url}
-                width="100%"
-                height="auto"
-                playing="playing"
-                // controls={true}
-                playbackRate={2}
-                volume={0}
-                muted={true}
-                loop={true}
-              />
-            </div>
+            <></>
           )}
-          {projectData.fullImage4.fields.file.url.includes(
-            "images.ctfassets.net"
-          ) ? (
-            <img
-              src={"https:" + projectData.fullImage4.fields.file.url}
-              alt={projectData.fullImage4.fields.file.title}
-              className="backImage"
-              width="100%"
-              height="auto"
-            />
+          {projectData.fullImage4 ? (
+            <>
+              {projectData.fullImage4.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage4.fields.file.url}
+                  alt={projectData.fullImage4.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage4.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
           ) : (
-            <div className="backImage">
-              <ReactPlayer
-                className="react-player"
-                url={"https:" + projectData.fullImage4.fields.file.url}
-                width="100%"
-                height="auto"
-                playing="playing"
-                // controls={true}
-                playbackRate={2}
-                volume={0}
-                muted={true}
-                loop={true}
-              />
-            </div>
+            <></>
           )}
-          {projectData.fullImage5.fields.file.url.includes(
-            "images.ctfassets.net"
-          ) ? (
-            <img
-              src={"https:" + projectData.fullImage5.fields.file.url}
-              alt={projectData.fullImage5.fields.file.title}
-              className="backImage"
-              width="100%"
-              height="auto"
-            />
+          {projectData.fullImage5 ? (
+            <>
+              {projectData.fullImage5.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage5.fields.file.url}
+                  alt={projectData.fullImage5.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage5.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
           ) : (
-            <div className="backImage">
-              <ReactPlayer
-                className="react-player"
-                url={"https:" + projectData.fullImage5.fields.file.url}
-                width="100%"
-                height="auto"
-                playing="playing"
-                // controls={true}
-                playbackRate={2}
-                volume={0}
-                muted={true}
-                loop={true}
-              />
-            </div>
+            <></>
+          )}
+          {projectData.fullImage6 ? (
+            <>
+              {projectData.fullImage6.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage6.fields.file.url}
+                  alt={projectData.fullImage6.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage6.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
+          ) : (
+            <></>
+          )}
+          {projectData.fullImage7 ? (
+            <>
+              {projectData.fullImage7.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage7.fields.file.url}
+                  alt={projectData.fullImage7.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage7.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
+          ) : (
+            <></>
+          )}
+          {projectData.fullImage8 ? (
+            <>
+              {projectData.fullImage5.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage8.fields.file.url}
+                  alt={projectData.fullImage8.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage8.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    playbackRate={2}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
+          ) : (
+            <></>
           )}
         </StyledBigImages>
       </StyledMarginWraperB>
