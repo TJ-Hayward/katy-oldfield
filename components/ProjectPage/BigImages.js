@@ -32,7 +32,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -64,7 +63,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -96,7 +94,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -128,7 +125,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -160,7 +156,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -192,7 +187,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -224,7 +218,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}
@@ -256,7 +249,6 @@ export default function BigImages({ project }) {
                     height="auto"
                     playing={true}
                     // controls={true}
-                    playbackRate={2}
                     volume={0}
                     muted={true}
                     loop={true}

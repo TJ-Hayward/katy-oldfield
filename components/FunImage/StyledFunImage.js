@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledFunImage = styled.div`
-  margin: 0 5vw;
-  padding-top: 5rem;
+  /* margin: 0 5vw; */
+  padding-top: 64px;
   .image-holder {
-    min-width: 90vw;
+    max-width: calc(100vw - 8rem);
     max-height: 85vh;
     box-sizing: content-box;
     align-self: center;

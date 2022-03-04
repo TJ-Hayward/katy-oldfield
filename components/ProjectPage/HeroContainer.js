@@ -20,15 +20,15 @@ export default function HeroSection({ project }) {
           width={projectData.projectImage.fields.file.details.image.width}
         />
         <StyledMarginWraperA>
-          <Row className="title">
+          <div className="title">
             <ibmSemi>{projectData.title}</ibmSemi>
-          </Row>
-          <Row className="role">
+          </div>
+          <div className="role">
             <openSansSmall> {projectData.role}</openSansSmall>
-          </Row>
-          <Row className="paragraph">
+          </div>
+          <div className="paragraph">
             <div> {projectData.mainParagraph}</div>
-          </Row>
+          </div>
         </StyledMarginWraperA>
       </StyledProjectHero>
     </>

@@ -20,6 +20,10 @@ yeseva40 {
   letter-spacing: -1.2px;
   margin: 0;
 }
+katyLogo {
+  font: normal normal normal 28px IBMPlexSans-Thin;
+  letter-spacing: 100;
+}
 ibmSemi {
   font: normal normal 600 80px/80px IBMPlexSans;
 }
@@ -28,12 +32,12 @@ ibmSmall {
 }
 
 a {
-  font: normal normal normal 16px/22px OpenSans;
+  font: normal normal normal 16px IBMPlexSans-Thin;
   color: inherit;
   text-decoration: none;
 }
 a:hover {
-  font: normal normal normal 16px/22px OpenSans;
+  font: normal normal normal 16px IBMPlexSans-medium;
   color: inherit;
   text-decoration: none;
 }
@@ -42,7 +46,7 @@ a:hover {
 }
 .header-logo {
   float: left;
-  letter-spacing: -1.2px;
+  letter-spacing: 100px;
 }
 .header-pages {
   text-align: right;
@@ -70,6 +74,7 @@ li a:hover {
 .row {
   padding-left: 0;
   padding-right: 0;
+  --bs-gutter-x: 1.5rem;
 }
 .container-fluid {
   padding-left: 0 !important;

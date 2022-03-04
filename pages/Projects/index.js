@@ -25,11 +25,11 @@ export async function getStaticProps() {
     },
   };
 }
-const Container = styled.div`
-  .holder {
-    text-align: center;
-    padding-top: 500px;
-    padding-bottom: 500px;
+const StyledHeader = styled.div`
+  .header_link {
+    .project {
+      font-weight: bold;
+    }
   }
 `;
 
@@ -65,7 +65,9 @@ const Home = ({ mainImages }) => {
     <>
       {mainImages.map((mainImages) => (
         <>
-          <Navbar />
+          <StyledHeader>
+            <Navbar />
+          </StyledHeader>
           <FunImage key={mainImages.sys.id} mainImages={mainImages} />
         </>
       ))}

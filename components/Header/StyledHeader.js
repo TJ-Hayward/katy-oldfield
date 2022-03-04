@@ -7,7 +7,7 @@ export const StyledHeader = styled.div`
       /* letter-spacing: -1.2px; */
       font-size: 20px;
     }
-    padding: 0rem 0.75rem 0rem 0.75rem;
+    /* padding: 0rem 0.75rem 0rem 0.75rem; */
   }
   @media only screen and (min-width: 768px) {
     padding: 0 4rem 0 4rem;
@@ -42,13 +42,16 @@ export const StyledHeader = styled.div`
       margin-left: 4rem;
     }
   }
-  .header_link {
+  .header_about {
+    color: black;
+  }
+  .header_projects {
     color: black;
   }
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
     overflow: hidden;
   }
 
@@ -60,6 +63,6 @@ export const StyledHeader = styled.div`
   }
 
   li a:hover {
-    text-decoration: underline;
+    font-family: ;
   }
 `;

@@ -23,32 +23,32 @@ const Navbar = () => {
   }, []);
   return (
     <StyledHeader>
-      <Row fluid className="header">
-        <ul>
-          <li className="header-logo">
-            {device === "mobile" ? (
-              <Link href="/">
-                <yeseva40>KO</yeseva40>
-              </Link>
-            ) : (
-              <Link href="/">
-                <yeseva40>Katy Oldfield</yeseva40>
-              </Link>
-            )}
-          </li>
-          <li className="header-pages">
-            <Link href="/about">
-              <a className="header_link">About</a>
+      {/* <Row fluid className="header"> */}
+      <ul>
+        <li className="header-logo">
+          {device === "mobile" ? (
+            <Link href="/">
+              <katyLogo>KO</katyLogo>
             </Link>
-          </li>
-          <li className="header-pages">
-            <Link href="/projects">
-              <a className="header_link">Projects</a>
+          ) : (
+            <Link href="/">
+              <katyLogo>KATY OLDFIELD</katyLogo>
             </Link>
-          </li>
-          {/* <li onClick={login}> Login/Signup</li> */}
-        </ul>
-      </Row>
+          )}
+        </li>
+        <li className="header-pages">
+          <Link href="/about">
+            <a className="header_about">ABOUT</a>
+          </Link>
+        </li>
+        <li className="header-pages">
+          <Link href="/projects">
+            <a className="header_projects">PROJECTS</a>
+          </Link>
+        </li>
+        {/* <li onClick={login}> Login/Signup</li> */}
+      </ul>
+      {/* </Row> */}
     </StyledHeader>
   );
 };

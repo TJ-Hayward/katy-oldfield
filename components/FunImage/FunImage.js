@@ -3,6 +3,7 @@ import { StyledFunImage } from "./StyledFunImage";
 import { createContext, useState, useEffect } from "react";
 import { Image } from "react-bootstrap";
 import Link from "next/link";
+import { StyledMarginWraperE } from "../MarginWraperE";
 
 const ImageSizer = createContext({
   widthA: "50%",
@@ -52,100 +53,104 @@ const FunImage = ({ mainImages }) => {
   return (
     <>
       <ImageSizer.Provider>
-        <StyledFunImage>
-          <div className="image-holder">
-            <div className="images">
-              <Link href="/projects/london-fashion-week">
-                <Image
-                  onMouseOver={() => setActiveImage("A")}
-                  width={widthA}
-                  className="image"
-                  loading="lazy"
-                  data-lazy="true"
-                  // alt="empty rectangle"
-                  // src="https://lfw-hackathon.s3.eu-west-2.amazonaws.com/Screenshot+2022-02-18+at+12.24.30.png"
-                  src={"https:" + projectImage1.fields.file.url}
-                  alt={projectImage1.title}
-                />
-              </Link>
+        <StyledMarginWraperE>
+          <StyledFunImage>
+            <div className="image-holder">
+              <div className="images">
+                <Link href="/projects/london-fashion-week">
+                  <Image
+                    onMouseOver={() => setActiveImage("A")}
+                    width={widthA}
+                    className="image"
+                    loading="lazy"
+                    data-lazy="true"
+                    height="auto"
+                    src={"https:" + projectImage1.fields.file.url}
+                    alt={projectImage1.title}
+                  />
+                </Link>
 
-              {activeImage === "A" && (
-                <opensanssmall
-                  className="centered"
-                  style={{
-                    left: " 31.25%",
-                  }}
-                >
-                  London Fashion Week
-                </opensanssmall>
-              )}
-              <Link href="/projects/abercrombie-and-fitch">
-                <Image
-                  onMouseOver={() => setActiveImage("B")}
-                  width={widthB}
-                  className="image"
-                  loading="lazy"
-                  data-lazy="true"
-                  src={"https:" + projectImage2.fields.file.url}
-                  alt={projectImage2.title}
-                />
-              </Link>
-              {activeImage === "B" && (
-                <opensanssmall
-                  className="centered"
-                  style={{
-                    left: " 43.75%",
-                  }}
-                >
-                  Abercrombie and fitch
-                </opensanssmall>
-              )}
-              <Link href="/projects/compass-plc">
-                <Image
-                  onMouseOver={() => setActiveImage("C")}
-                  width={widthC}
-                  className="image"
-                  loading="lazy"
-                  data-lazy="true"
-                  src={"https:" + projectImage3.fields.file.url}
-                  alt={projectImage3.title}
-                />
-              </Link>
-              {activeImage === "C" && (
-                <opensanssmall
-                  className="centered"
-                  style={{
-                    left: " 56.25%",
-                  }}
-                >
-                  Compass PLC
-                </opensanssmall>
-              )}
-              <Link href="/projects/st-andrews-links">
-                <Image
-                  onMouseOver={() => setActiveImage("D")}
-                  width={widthD}
-                  widthImage={activeImage}
-                  className="image"
-                  loading="lazy"
-                  data-lazy="true"
-                  src={"https:" + projectImage4.fields.file.url}
-                  alt={projectImage4.title}
-                />
-              </Link>
-              {activeImage === "D" && (
-                <opensanssmall
-                  className="centered"
-                  style={{
-                    left: " 68.75%",
-                  }}
-                >
-                  St Andrews
-                </opensanssmall>
-              )}
+                {activeImage === "A" && (
+                  <opensanssmall
+                    className="centered"
+                    style={{
+                      left: " 31.25%",
+                    }}
+                  >
+                    London Fashion Week
+                  </opensanssmall>
+                )}
+                <Link href="/projects/abercrombie-and-fitch">
+                  <Image
+                    onMouseOver={() => setActiveImage("B")}
+                    width={widthB}
+                    height="auto"
+                    className="image"
+                    loading="lazy"
+                    data-lazy="true"
+                    src={"https:" + projectImage2.fields.file.url}
+                    alt={projectImage2.title}
+                  />
+                </Link>
+                {activeImage === "B" && (
+                  <opensanssmall
+                    className="centered"
+                    style={{
+                      left: " 43.75%",
+                    }}
+                  >
+                    Abercrombie and fitch
+                  </opensanssmall>
+                )}
+                <Link href="/projects/compass-plc">
+                  <Image
+                    onMouseOver={() => setActiveImage("C")}
+                    width={widthC}
+                    height="auto"
+                    className="image"
+                    loading="lazy"
+                    data-lazy="true"
+                    src={"https:" + projectImage3.fields.file.url}
+                    alt={projectImage3.title}
+                  />
+                </Link>
+                {activeImage === "C" && (
+                  <opensanssmall
+                    className="centered"
+                    style={{
+                      left: " 56.25%",
+                    }}
+                  >
+                    Compass PLC
+                  </opensanssmall>
+                )}
+                <Link href="/projects/st-andrews-links">
+                  <Image
+                    onMouseOver={() => setActiveImage("D")}
+                    width={widthD}
+                    widthImage={activeImage}
+                    className="image"
+                    height="auto"
+                    loading="lazy"
+                    data-lazy="true"
+                    src={"https:" + projectImage4.fields.file.url}
+                    alt={projectImage4.title}
+                  />
+                </Link>
+                {activeImage === "D" && (
+                  <opensanssmall
+                    className="centered"
+                    style={{
+                      left: " 68.75%",
+                    }}
+                  >
+                    St Andrews
+                  </opensanssmall>
+                )}
+              </div>
             </div>
-          </div>
-        </StyledFunImage>
+          </StyledFunImage>
+        </StyledMarginWraperE>
       </ImageSizer.Provider>
     </>
   );

@@ -53,7 +53,7 @@
   src: local("OpenSans-Bold"), url(/fonts/OpenSans-Bold.ttf) format("truetype");
 }
 @font-face {
-  font-family: "IBMPlexSans";
+  font-family: "IBMPlexSans-medium";
   font-style: medium;
   font-display: swap;
   src: local("IBMPlexSans-Medium"),
@@ -74,4 +74,13 @@
   font-display: swap;
   src: local("IBMPlexSans-SemiBold"),
     url(/fonts/IBMPlexSans-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "IBMPlexSans-Thin";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local("IBMPlexSans-Thin"),
+    url(/fonts/IBMPlexSans-Thin.ttf) format("truetype");
 }
