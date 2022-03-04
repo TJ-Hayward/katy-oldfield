@@ -26,13 +26,13 @@ const Navbar = () => {
       {/* <Row fluid className="header"> */}
       <ul>
         <li className="header-logo">
-          {device === "mobile" ? (
+          {device !== "mobile" ? (
             <Link href="/">
-              <katyLogo>KO</katyLogo>
+              <katyLogo>KATY OLDFIELD</katyLogo>
             </Link>
           ) : (
             <Link href="/">
-              <katyLogo>KATY OLDFIELD</katyLogo>
+              <katyLogo>KO</katyLogo>
             </Link>
           )}
         </li>

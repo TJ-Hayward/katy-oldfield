@@ -18,6 +18,7 @@ export default function HeroSection({ project }) {
           alt={projectData.projectImage.fields.file.title}
           height={projectData.projectImage.fields.file.details.image.height}
           width={projectData.projectImage.fields.file.details.image.width}
+          loading="lazy"
         />
         <StyledMarginWraperA>
           <div className="title">

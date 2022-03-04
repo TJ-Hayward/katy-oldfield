@@ -22,6 +22,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -53,6 +54,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -84,6 +86,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -115,6 +118,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -146,6 +150,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -177,6 +182,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -208,6 +214,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
@@ -239,6 +246,7 @@ export default function BigImages({ project }) {
                   className="backImage"
                   width="100%"
                   height="auto"
+                  loading="lazy"
                 />
               ) : (
                 <div className="backImage">
