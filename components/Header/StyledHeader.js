@@ -9,10 +9,10 @@ export const StyledHeader = styled.div`
     }
     /* padding: 0rem 0.75rem 0rem 0.75rem; */
   }
-  @media only screen and (min-width: 768px) {
-    padding: 0 4rem 0 4rem;
+  @media only screen and (max-width: 768px) {
+    padding: 0 1rem 0 1rem;
   }
-  @media only screen and (min-width: 1020px) {
+  @media only screen and (min-width: 768px) {
     padding: 0rem 4rem 0rem 4rem;
   }
   @media only screen and (min-width: 1400px) {
