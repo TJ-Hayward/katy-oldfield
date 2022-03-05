@@ -64,26 +64,26 @@ const Home = ({ mainImages }) => {
   // }
   const router = useRouter();
   const { user, login, loggedIn } = useContext(AuthContext);
-  if (!loggedIn) {
-    setTimeout(() => router.replace("/"), 0);
-  }
+  // if (!loggedIn) {
+  //   router.replace("/");
+  // }
 
   return (
     <>
-      {loggedIn ? (
-        <>
-          {mainImages.map((mainImages) => (
-            <>
-              <StyledHeader>
-                <Navbar page="projects" />
-              </StyledHeader>
-              <FunImage key={mainImages.sys.id} mainImages={mainImages} />
-            </>
-          ))}
-        </>
-      ) : (
+      {/* {loggedIn ? ( */}
+      <>
+        {mainImages.map((mainImages) => (
+          <>
+            <StyledHeader>
+              <Navbar page="projects" />
+            </StyledHeader>
+            <FunImage key={mainImages.sys.id} mainImages={mainImages} />
+          </>
+        ))}
+      </>
+      {/* ) : (
         <></>
-      )}
+      )} */}
     </>
   );
 };

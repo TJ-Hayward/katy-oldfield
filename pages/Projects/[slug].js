@@ -46,16 +46,16 @@ export async function getStaticProps({ params }) {
 export default function FullProject({ project, hasReadPermission }) {
   const router = useRouter();
   const { user, login, loggedIn } = useContext(AuthContext);
-  if (!loggedIn) {
-    setTimeout(() => router.replace("/"), 0);
-  }
+  // if (!loggedIn) {
+  //   router.replace("/");
+  // }
   return (
     <>
-      {loggedIn ? (
-        <>
-          <Navbar />
-          <StyledProjectSlug>
-            {/* <Parallax
+      {/* {loggedIn ? ( */}
+      <>
+        <Navbar />
+        <StyledProjectSlug>
+          {/* <Parallax
     id="parallax-main"
     pages={5.5}
     style={{ top: "flex-end", left: "0" }}
@@ -77,11 +77,11 @@ export default function FullProject({ project, hasReadPermission }) {
           alignItems: "center",
         }}
       > */}
-            <HeroSection project={project} />
-            {/* </ParallaxLayer> */}
-            {/*
+          <HeroSection project={project} />
+          {/* </ParallaxLayer> */}
+          {/*
       <ProjectDetails project={project} /> */}
-            {/* <ParallaxLayer
+          {/* <ParallaxLayer
         factor={3}
         offset={1.5}
         speed={0}
@@ -97,17 +97,17 @@ export default function FullProject({ project, hasReadPermission }) {
           alignItems: "center",
         }}
       > */}
-            <BigImages project={project} />
-            {/* </ParallaxLayer> */}
+          <BigImages project={project} />
+          {/* </ParallaxLayer> */}
 
-            <Testimonials project={project} />
-            {/* </div> */}
-            {/* </Parallax> */}
-          </StyledProjectSlug>
-        </>
-      ) : (
+          <Testimonials project={project} />
+          {/* </div> */}
+          {/* </Parallax> */}
+        </StyledProjectSlug>
+      </>
+      {/* ) : (
         <></>
-      )}
+      )} */}
     </>
   );
 }
