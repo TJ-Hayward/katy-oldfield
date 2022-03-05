@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 export const StyledLanding = styled.div`
   .fun_container {
-    height: 100%;
     width: 100%;
-    position: absolute;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* position: absolute; */
     background-color: #0e431d;
     text-align: center;
     align-items: center;

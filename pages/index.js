@@ -10,7 +10,7 @@ import AuthContext from "../stores/authContext";
 import { useContext } from "react";
 import { Row } from "react-bootstrap";
 import { StyledLanding } from "../components/styles/StyledLanding";
-import CoolestSVG from "../components/CoolestSVG";
+import CoolestSVG from "../components/CoolestSVG/CoolestSVG";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -82,7 +82,7 @@ export default function Home({ homeStuff, miniProject, hasReadPermission }) {
     <StyledLanding>
       <div className="fun_container">
         <yeseva-title>
-          <div>
+          <div className="svg_fun">
             <CoolestSVG />
           </div>
         </yeseva-title>
