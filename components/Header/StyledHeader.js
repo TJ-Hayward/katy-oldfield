@@ -71,6 +71,6 @@ export const StyledHeader = styled.div`
   }
 
   li a:hover {
-    font-family: ;
+    font-family: normal normal normal 16px IBMPlexSans-medium;
   }
 `;

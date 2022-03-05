@@ -13,7 +13,12 @@ export const StyledCoolestSVG = styled.div`
     }
   }
 
-  .path {
+  .pathA {
+    stroke-dasharray: 3269;
+    stroke-dashoffset: 3269;
+    animation: dash 9s linear forwards;
+  }
+  .pathB {
     stroke-dasharray: 3269;
     stroke-dashoffset: 3269;
     animation: dash 5s linear forwards;
