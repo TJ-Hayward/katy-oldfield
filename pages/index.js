@@ -67,22 +67,30 @@ export default function Home({ homeStuff, miniProject, hasReadPermission }) {
     return (
       <StyledLanding>
         <div className="fun_container">
-          <yeseva-title className="contents">OK</yeseva-title>
+          <Row>
+            <yeseva-title>
+              <div className="contents">OK</div>
+            </yeseva-title>
+          </Row>
         </div>
       </StyledLanding>
     );
   }
+
   return (
     <StyledLanding>
       <div className="fun_container">
         <Row>
-          <yeseva-title className="contents">KO</yeseva-title>
+          <yeseva-title>
+            <div className="contents">KO</div>
+          </yeseva-title>
         </Row>
-        <Row>
-          <button onClick={login}>
+
+        <div className="button-holder">
+          <div className="buttons" onClick={login}>
             <a>Login</a>
-          </button>
-        </Row>
+          </div>
+        </div>
       </div>
     </StyledLanding>
   );

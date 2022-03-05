@@ -43,10 +43,18 @@ export const StyledHeader = styled.div`
     }
   }
   .header_about {
+    font: ${(props) =>
+      props.page === "about"
+        ? "normal normal normal 16px IBMPlexSans-medium"
+        : "normal normal normal 16px IBMPlexSans-Thin"};
     color: black;
   }
   .header_projects {
     color: black;
+    font: ${(props) =>
+      props.page === "projects"
+        ? "normal normal normal 16px IBMPlexSans-medium"
+        : "normal normal normal 16px IBMPlexSans-Thin"};
   }
   ul {
     list-style-type: none;

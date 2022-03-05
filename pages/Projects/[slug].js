@@ -9,6 +9,8 @@ import Navbar from "../../components/Header/Header";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { StyledMarginTop } from "../../components/MarginTop";
 import { StyledProjectSlug } from "../../components/styles/StyledProjectSlug";
+import AuthContext from "../../stores/authContext";
+import { useContext } from "react";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -42,59 +44,70 @@ export async function getStaticProps({ params }) {
 }
 
 export default function FullProject({ project, hasReadPermission }) {
+  const router = useRouter();
+  const { user, login, loggedIn } = useContext(AuthContext);
+  if (!loggedIn) {
+    setTimeout(() => router.replace("/"), 0);
+  }
   return (
     <>
-      <Navbar />
-      <StyledProjectSlug>
-        {/* <Parallax
-        id="parallax-main"
-        pages={5.5}
-        style={{ top: "flex-end", left: "0" }}
-      >
-        <div>
-          <ParallaxLayer
-            factor={1}
-            offset={0}
-            speed={0}
-            style={{ background: "white" }}
-          />
-          <ParallaxLayer
-            factor={1}
-            offset={0}
-            speed={0}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          > */}
-        <HeroSection project={project} />
-        {/* </ParallaxLayer> */}
-        {/* 
-          <ProjectDetails project={project} /> */}
-        {/* <ParallaxLayer
-            factor={3}
-            offset={1.5}
-            speed={0}
-            style={{ background: "white" }}
-          />
-          <ParallaxLayer
-            factor={3}
-            offset={1.5}
-            speed={0}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          > */}
-        <BigImages project={project} />
-        {/* </ParallaxLayer> */}
+      {loggedIn ? (
+        <>
+          <Navbar />
+          <StyledProjectSlug>
+            {/* <Parallax
+    id="parallax-main"
+    pages={5.5}
+    style={{ top: "flex-end", left: "0" }}
+  >
+    <div>
+      <ParallaxLayer
+        factor={1}
+        offset={0}
+        speed={0}
+        style={{ background: "white" }}
+      />
+      <ParallaxLayer
+        factor={1}
+        offset={0}
+        speed={0}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      > */}
+            <HeroSection project={project} />
+            {/* </ParallaxLayer> */}
+            {/*
+      <ProjectDetails project={project} /> */}
+            {/* <ParallaxLayer
+        factor={3}
+        offset={1.5}
+        speed={0}
+        style={{ background: "white" }}
+      />
+      <ParallaxLayer
+        factor={3}
+        offset={1.5}
+        speed={0}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      > */}
+            <BigImages project={project} />
+            {/* </ParallaxLayer> */}
 
-        <Testimonials project={project} />
-        {/* </div> */}
-        {/* </Parallax> */}
-      </StyledProjectSlug>
+            <Testimonials project={project} />
+            {/* </div> */}
+            {/* </Parallax> */}
+          </StyledProjectSlug>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

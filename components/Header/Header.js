@@ -4,7 +4,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import AuthContext from "../../stores/authContext";
 import { useContext, useState, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ page }) => {
   const { user, login } = useContext(AuthContext);
 
   const [device, setDevice] = useState("mobile");
@@ -22,12 +22,13 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <StyledHeader>
+    <StyledHeader page={page}>
+      {console.log(page)}
       {/* <Row fluid className="header"> */}
       <ul>
         <li className="header-logo">
           {device !== "mobile" ? (
-            <Link href="/">
+            <Link href="/projects">
               <katy-logo>KATY OLDFIELD</katy-logo>
             </Link>
           ) : (
@@ -46,7 +47,7 @@ const Navbar = () => {
             <a className="header_projects">PROJECTS</a>
           </Link>
         </li>
-        {/* <li onClick={login}> Login/Signup</li> */}
+        <li onClick={login}> Login/Signup</li>
       </ul>
       {/* </Row> */}
     </StyledHeader>

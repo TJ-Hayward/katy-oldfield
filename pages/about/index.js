@@ -64,7 +64,7 @@ const Home = ({ homeStuff, miniProject, hasReadPermission }) => {
 
   return (
     <div className="globalTheme">
-      <Navbar />
+      <Navbar page="about" />
       {homeStuff.map((homeStuff) => (
         <>
           <TopSection key={homeStuff.sys.id} homeStuff={homeStuff} />

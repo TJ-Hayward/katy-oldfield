@@ -10,6 +10,8 @@ import Login from "../../components/login/login";
 import Navbar from "../../components/Header/Header";
 import FunImage from "../../components/FunImage/FunImage";
 import ReactPlayer from "react-player";
+import AuthContext from "../../stores/authContext";
+import { useContext } from "react";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -60,17 +62,28 @@ const Home = ({ mainImages }) => {
   // if (!hasReadPermission) {
   //   return <div>Access denied.</div>;
   // }
+  const router = useRouter();
+  const { user, login, loggedIn } = useContext(AuthContext);
+  if (!loggedIn) {
+    setTimeout(() => router.replace("/"), 0);
+  }
 
   return (
     <>
-      {mainImages.map((mainImages) => (
+      {loggedIn ? (
         <>
-          <StyledHeader>
-            <Navbar />
-          </StyledHeader>
-          <FunImage key={mainImages.sys.id} mainImages={mainImages} />
+          {mainImages.map((mainImages) => (
+            <>
+              <StyledHeader>
+                <Navbar page="projects" />
+              </StyledHeader>
+              <FunImage key={mainImages.sys.id} mainImages={mainImages} />
+            </>
+          ))}
         </>
-      ))}
+      ) : (
+        <></>
+      )}
     </>
   );
 };
