@@ -44,7 +44,15 @@ export default function Testimonials({ project }) {
         }}
       > */}
       <div style={{ width: "100%" }}>
-        <div style={{ "background-color": "#0e431d" }}>
+        <div
+          style={{
+            "background-color": `${
+              projectData.testimonialColor
+                ? `${projectData.testimonialColor}`
+                : "#0e431d"
+            }`,
+          }}
+        >
           <StyledMarginWraperD>
             <StyledTestimonials>
               {device === "mobile" ? (
@@ -54,11 +62,12 @@ export default function Testimonials({ project }) {
                   </Row>
                   <Row>
                     <Row fluid>
-                      <div> {projectData.testimonial1}</div>
+                      <div className="actualTestimonials">
+                        {projectData.testimonial1}
+                      </div>
                     </Row>
                     <Row>
                       <ibmSmall className="testimonialPerson">
-                        {" "}
                         {projectData.testimonialName1}
                       </ibmSmall>
                     </Row>
@@ -66,11 +75,12 @@ export default function Testimonials({ project }) {
                   <Row>
                     <Row>
                       <Row fluid>
-                        <div> {projectData.testimonial2}</div>
+                        <div className="actualTestimonials">
+                          {projectData.testimonial2}
+                        </div>
                       </Row>
                       <Row>
                         <ibmSmall className="testimonialPerson">
-                          {" "}
                           {projectData.testimonialName2}
                         </ibmSmall>
                       </Row>
@@ -79,11 +89,12 @@ export default function Testimonials({ project }) {
                   <Row>
                     <Row>
                       <Row>
-                        <div> {projectData.testimonial3}</div>
+                        <div className="actualTestimonials">
+                          {projectData.testimonial3}
+                        </div>
                       </Row>
                       <Row>
                         <ibmSmall className="testimonialPerson">
-                          {" "}
                           {projectData.testimonialName3}
                         </ibmSmall>
                       </Row>
@@ -93,38 +104,43 @@ export default function Testimonials({ project }) {
               ) : (
                 <>
                   <Row>
-                    <ibmSemi className="testimonials">Testimonials</ibmSemi>
+                    <ibmSemi className="testimonials desk">
+                      Testimonials
+                    </ibmSemi>
                   </Row>
                   <Row>
                     <Col>
                       <Row>
-                        <div> {projectData.testimonial1}</div>
+                        <div className="actualTestimonials">
+                          {projectData.testimonial1}
+                        </div>
                       </Row>
                       <Row>
                         <ibmSmall className="testimonialPerson">
-                          {" "}
                           {projectData.testimonialName1}
                         </ibmSmall>
                       </Row>
                     </Col>
                     <Col>
                       <Row>
-                        <div> {projectData.testimonial2}</div>
+                        <div className="actualTestimonials">
+                          {projectData.testimonial2}
+                        </div>
                       </Row>
                       <Row>
                         <ibmSmall className="testimonialPerson">
-                          {" "}
                           {projectData.testimonialName2}
                         </ibmSmall>
                       </Row>
                     </Col>
                     <Col>
                       <Row>
-                        <div> {projectData.testimonial3}</div>
+                        <div className="actualTestimonials">
+                          {projectData.testimonial3}
+                        </div>
                       </Row>
                       <Row>
                         <ibmSmall className="testimonialPerson">
-                          {" "}
                           {projectData.testimonialName3}
                         </ibmSmall>
                       </Row>

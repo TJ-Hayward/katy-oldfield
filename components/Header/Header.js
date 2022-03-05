@@ -28,11 +28,11 @@ const Navbar = () => {
         <li className="header-logo">
           {device !== "mobile" ? (
             <Link href="/">
-              <katyLogo>KATY OLDFIELD</katyLogo>
+              <katy-logo>KATY OLDFIELD</katy-logo>
             </Link>
           ) : (
             <Link href="/">
-              <katyLogo>KO</katyLogo>
+              <katy-logo>KO</katy-logo>
             </Link>
           )}
         </li>

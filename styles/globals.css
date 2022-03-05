@@ -6,29 +6,35 @@ body {
   font: normal normal normal 16px/22px OpenSans;
   margin: 0;
 }
-yesevaTitle {
+yeseva-title {
   font: normal normal normal 80px/115px Yeseva One;
 }
-yeseva40N {
+yeseva-40-n {
   font: normal normal normal 40px/47px Yeseva One;
 }
-openSansSmall {
+open-sans-small {
   font: normal normal bold 16px/22px OpenSans;
+}
+ibm-sans-small {
+  font: normal normal normal 18px/22px IBMPlexSans-medium;
 }
 yeseva40 {
   font: normal normal normal 40px Yeseva One;
   letter-spacing: -1.2px;
   margin: 0;
 }
-katyLogo {
+katy-logo {
   font: normal normal normal 28px IBMPlexSans-Thin;
   letter-spacing: 100;
 }
-ibmSemi {
+ibm-semi {
   font: normal normal 600 80px/80px IBMPlexSans;
 }
-ibmSmall {
+ibm-small {
   font: normal normal 32px/40px IBMPlexSans;
+}
+ibm-body {
+  font: normal normal 16px/24px IBMPlexSans;
 }
 
 a {

@@ -11,6 +11,12 @@ export const StyledFunImage = styled.div`
     flex-wrap: wrap;
     overflow-y: hidden;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: ltr;
+    will-change: flex;
+    /* flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 1; */
   }
   .images {
     object-fit: cover;
@@ -23,6 +29,7 @@ export const StyledFunImage = styled.div`
     overflow-x: hidden;
   } */
   .centered {
+    font: normal normal 24px/40px IBMPlexSans;
     position: absolute;
     top: 90%;
     transform: translate(-50%, -50%);
@@ -32,7 +39,7 @@ export const StyledFunImage = styled.div`
 
   .image {
     transition: all 500ms ease-in;
-    /* transition: 1s cubic-bezier(.29,0,.2,1); */
+    /* transition: 500ms cubic-bezier(0.29, 0, 0.2, 1); */
     height: 791px;
     object-fit: cover;
   }

@@ -22,7 +22,7 @@ export default function HeroSection({ project }) {
         />
         <StyledMarginWraperA>
           <div className="title">
-            <ibmSemi>{projectData.title}</ibmSemi>
+            <ibm-semi>{projectData.title}</ibm-semi>
           </div>
           <div className="role">
             <openSansSmall> {projectData.role}</openSansSmall>

@@ -33,7 +33,10 @@ export default function ProjectDetails({ project }) {
               <Col md={7}>
                 <Row>
                   <Row style={{ display: "flex", justifyContent: "center" }}>
-                    <ibmSmall> {project.fields.smallParagraphTitle1}</ibmSmall>
+                    <ibm-small>
+                      {" "}
+                      {project.fields.smallParagraphTitle1}
+                    </ibm-small>
                   </Row>
                   <Row>
                     <div> {project.fields.smallParagraph1}</div>
@@ -83,7 +86,10 @@ export default function ProjectDetails({ project }) {
               <Col md={7}>
                 <Row>
                   <Row style={{ display: "flex", justifyContent: "center" }}>
-                    <ibmSmall> {project.fields.smallParagraphTitle1}</ibmSmall>
+                    <ibm-small>
+                      {" "}
+                      {project.fields.smallParagraphTitle1}
+                    </ibm-small>
                   </Row>
                   <Row>
                     <div> {project.fields.smallParagraph1}</div>
@@ -131,7 +137,7 @@ export default function ProjectDetails({ project }) {
             <Row>
               <Col md={7}>
                 <Row>
-                  <ibmSmall> {project.fields.smallParagraphTitle3}</ibmSmall>
+                  <ibm-small> {project.fields.smallParagraphTitle3}</ibm-small>
                 </Row>
                 <Row>
                   <div> {project.fields.smallParagraph3}</div>

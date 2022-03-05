@@ -71,14 +71,14 @@ const FunImage = ({ mainImages }) => {
                 </Link>
 
                 {activeImage === "A" && (
-                  <opensanssmall
+                  <div
                     className="centered"
                     style={{
                       left: " 31.25%",
                     }}
                   >
                     London Fashion Week
-                  </opensanssmall>
+                  </div>
                 )}
                 <Link href="/projects/abercrombie-and-fitch">
                   <Image
@@ -93,14 +93,14 @@ const FunImage = ({ mainImages }) => {
                   />
                 </Link>
                 {activeImage === "B" && (
-                  <opensanssmall
+                  <div
                     className="centered"
                     style={{
                       left: " 43.75%",
                     }}
                   >
                     Abercrombie and fitch
-                  </opensanssmall>
+                  </div>
                 )}
                 <Link href="/projects/compass-plc">
                   <Image
@@ -115,14 +115,14 @@ const FunImage = ({ mainImages }) => {
                   />
                 </Link>
                 {activeImage === "C" && (
-                  <opensanssmall
+                  <div
                     className="centered"
                     style={{
                       left: " 56.25%",
                     }}
                   >
                     Compass PLC
-                  </opensanssmall>
+                  </div>
                 )}
                 <Link href="/projects/st-andrews-links">
                   <Image
@@ -138,14 +138,14 @@ const FunImage = ({ mainImages }) => {
                   />
                 </Link>
                 {activeImage === "D" && (
-                  <opensanssmall
+                  <div
                     className="centered"
                     style={{
                       left: " 68.75%",
                     }}
                   >
                     St Andrews
-                  </opensanssmall>
+                  </div>
                 )}
               </div>
             </div>

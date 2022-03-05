@@ -6,7 +6,7 @@ export default function AboutMe({ homeStuff }) {
   return (
     <div>
       <StyledMarginWraperB>
-        <yeseva40N>About me</yeseva40N>
+        <yeseva-40-n>About me</yeseva-40-n>
         <div> {aboutMeParagraph}</div>
       </StyledMarginWraperB>
     </div>

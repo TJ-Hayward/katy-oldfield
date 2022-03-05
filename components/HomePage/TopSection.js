@@ -9,7 +9,7 @@ export default function TopSection({ homeStuff }) {
     <div>
       <StyledMarginTop />
       <StyledMarginWraperC>
-        <yesevaTitle>{title}</yesevaTitle>
+        <yeseva-title>{title}</yeseva-title>
         <div> {introduction}</div>
       </StyledMarginWraperC>
 

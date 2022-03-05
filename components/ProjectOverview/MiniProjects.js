@@ -5,9 +5,9 @@ export default function MiniProjectContainer({ project }) {
   const projectData = project.fields;
   return (
     <div>
-      <yeseva40N>
+      <yeseva-40-n>
         <a href={`/projects/${projectData.slug}`}>{projectData.name}</a>
-      </yeseva40N>
+      </yeseva-40-n>
       <div> {projectData.objectiveOfProject}</div>
 
       <Image
