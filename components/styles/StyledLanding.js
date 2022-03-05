@@ -18,7 +18,7 @@ export const StyledLanding = styled.div`
     text-align: center;
     height: 100%;
     width: 100%;
-    margin-block: 0px;
+    /* margin-block: 0px; */
     background-color: #0e431d;
     color: white;
     @media only screen and (max-width: 576px) {

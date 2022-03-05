@@ -10,6 +10,7 @@ import AuthContext from "../stores/authContext";
 import { useContext } from "react";
 import { Row } from "react-bootstrap";
 import { StyledLanding } from "../components/styles/StyledLanding";
+import CoolestSVG from "../components/CoolestSVG";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -80,11 +81,11 @@ export default function Home({ homeStuff, miniProject, hasReadPermission }) {
   return (
     <StyledLanding>
       <div className="fun_container">
-        <Row>
-          <yeseva-title>
-            <div className="contents">KO</div>
-          </yeseva-title>
-        </Row>
+        <yeseva-title>
+          <div>
+            <CoolestSVG />
+          </div>
+        </yeseva-title>
 
         <div className="button-holder">
           <div className="buttons" onClick={login}>
