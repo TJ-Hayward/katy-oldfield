@@ -28,7 +28,7 @@ export default function HeroSection({ project }) {
             <openSansSmall> {projectData.role}</openSansSmall>
           </div>
           <div className="paragraph">
-            <div> {projectData.mainParagraph}</div>
+            <ibm-body> {projectData.mainParagraph}</ibm-body>
           </div>
         </StyledMarginWraperA>
       </StyledProjectHero>

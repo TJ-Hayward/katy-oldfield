@@ -2,11 +2,6 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.div`
   @media only screen and (max-width: 768px) {
-    .header-logo {
-      float: left;
-      /* letter-spacing: -1.2px; */
-      font-size: 20px;
-    }
     /* padding: 0rem 0.75rem 0rem 0.75rem; */
   }
   @media only screen and (max-width: 768px) {
@@ -30,11 +25,13 @@ export const StyledHeader = styled.div`
   .header-logo {
     float: left;
     letter-spacing: -1.2px;
+    line-height: 24px;
   }
   .header-pages {
     text-align: right;
     float: right;
-    line-height: 40px;
+    line-height: 32px;
+    font-size: 14px;
     @media only screen and (max-width: 576px) {
       margin-left: 2rem;
     }
@@ -45,16 +42,16 @@ export const StyledHeader = styled.div`
   .header_about {
     font: ${(props) =>
       props.page === "about"
-        ? "normal normal normal 16px IBMPlexSans-medium"
-        : "normal normal normal 16px IBMPlexSans-Thin"};
+        ? "normal normal normal 14px IBMPlexSans-medium"
+        : "normal normal normal 14px IBMPlexSans-Thin"};
     color: black;
   }
   .header_projects {
     color: black;
     font: ${(props) =>
       props.page === "projects"
-        ? "normal normal normal 16px IBMPlexSans-medium"
-        : "normal normal normal 16px IBMPlexSans-Thin"};
+        ? "normal normal normal 14px IBMPlexSans-medium"
+        : "normal normal normal 14px IBMPlexSans-Thin"};
   }
   ul {
     list-style-type: none;
