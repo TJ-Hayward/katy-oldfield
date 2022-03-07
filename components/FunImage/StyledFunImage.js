@@ -41,7 +41,8 @@ export const StyledFunImage = styled.div`
   }
 
   .image {
-    transition: all 500ms ease-in-out;
+    transition: all 500ms ease;
+
     /* transition: 500ms cubic-bezier(0.29, 0, 0.2, 1); */
     height: 791px;
     object-fit: cover;
