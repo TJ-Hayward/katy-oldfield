@@ -237,7 +237,7 @@ export default function BigImages({ project }) {
           )}
           {projectData.fullImage8 ? (
             <>
-              {projectData.fullImage5.fields.file.url.includes(
+              {projectData.fullImage8.fields.file.url.includes(
                 "images.ctfassets.net"
               ) ? (
                 <img
@@ -253,6 +253,38 @@ export default function BigImages({ project }) {
                   <ReactPlayer
                     className="react-player"
                     url={"https:" + projectData.fullImage8.fields.file.url}
+                    width="100%"
+                    height="auto"
+                    playing={true}
+                    // controls={true}
+                    volume={0}
+                    muted={true}
+                    loop={true}
+                  />
+                </div>
+              )}
+            </>
+          ) : (
+            <></>
+          )}
+          {projectData.fullImage9 ? (
+            <>
+              {projectData.fullImage9.fields.file.url.includes(
+                "images.ctfassets.net"
+              ) ? (
+                <img
+                  src={"https:" + projectData.fullImage9.fields.file.url}
+                  alt={projectData.fullImage9.fields.file.title}
+                  className="backImage"
+                  width="100%"
+                  height="auto"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="backImage">
+                  <ReactPlayer
+                    className="react-player"
+                    url={"https:" + projectData.fullImage9.fields.file.url}
                     width="100%"
                     height="auto"
                     playing={true}
