@@ -185,14 +185,14 @@ const FunImage = ({ mainImages }) => {
                       alt={projectImage1.title}
                     />
                   </Link>
-                  <div
+                  {/* <div
                     className="centered"
                     style={{
                       left: " 50%",
                     }}
                   >
                     London Fashion Week
-                  </div>
+                  </div> */}
                 </Row>
                 <Row>
                   <Link href="/projects/abercrombie-and-fitch">
@@ -207,14 +207,14 @@ const FunImage = ({ mainImages }) => {
                       alt={projectImage2.title}
                     />
                   </Link>
-                  <div
+                  {/* <div
                     className="centered"
                     style={{
                       left: " 50%",
                     }}
                   >
                     Abercrombie and fitch
-                  </div>
+                  </div> */}
                 </Row>
                 <Row>
                   <Link href="/projects/compass-plc">
@@ -230,14 +230,14 @@ const FunImage = ({ mainImages }) => {
                     />
                   </Link>
 
-                  <div
+                  {/* <div
                     className="centered"
                     style={{
                       left: " 56.25%",
                     }}
                   >
                     Compass PLC
-                  </div>
+                  </div> */}
                 </Row>
                 <Row>
                   <Link href="/projects/st-andrews-links">
@@ -251,7 +251,7 @@ const FunImage = ({ mainImages }) => {
                       alt={projectImage4.title}
                     />
                   </Link>
-
+                  {/* 
                   <div
                     className="centered"
                     style={{
@@ -259,7 +259,7 @@ const FunImage = ({ mainImages }) => {
                     }}
                   >
                     St Andrews
-                  </div>
+                  </div> */}
                 </Row>
               </div>
             </div>
