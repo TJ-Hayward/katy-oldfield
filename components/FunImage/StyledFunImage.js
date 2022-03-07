@@ -34,14 +34,14 @@ export const StyledFunImage = styled.div`
   .centered {
     font: normal normal 24px/40px IBMPlexSans;
     position: absolute;
-    top: 90%;
+    top: 87.5%;
     transform: translate(-50%, -50%);
     color: black;
     left: 31.25%;
   }
 
   .image {
-    transition: all 500ms ease-in;
+    transition: all 500ms ease-in-out;
     /* transition: 500ms cubic-bezier(0.29, 0, 0.2, 1); */
     height: 791px;
     object-fit: cover;
