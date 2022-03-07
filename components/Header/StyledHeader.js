@@ -24,7 +24,7 @@ export const StyledHeader = styled.div`
   /* padding: 5rem 0 5rem 0; */
   .header-logo {
     float: left;
-    letter-spacing: -1.2px;
+    letter-spacing: 1.5px;
     line-height: 24px;
   }
   .header-pages {
@@ -36,7 +36,7 @@ export const StyledHeader = styled.div`
       margin-left: 2rem;
     }
     @media only screen and (min-width: 576px) {
-      margin-left: 4rem;
+      margin-left: 2rem;
     }
   }
   .header_about {
@@ -45,6 +45,7 @@ export const StyledHeader = styled.div`
         ? "normal normal normal 14px IBMPlexSans-medium"
         : "normal normal normal 14px IBMPlexSans-Thin"};
     color: black;
+    letter-spacing: 1px;
   }
   .header_projects {
     color: black;
@@ -52,6 +53,7 @@ export const StyledHeader = styled.div`
       props.page === "projects"
         ? "normal normal normal 14px IBMPlexSans-medium"
         : "normal normal normal 14px IBMPlexSans-Thin"};
+    letter-spacing: 1px;
   }
   ul {
     list-style-type: none;

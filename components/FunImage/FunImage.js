@@ -95,6 +95,29 @@ const FunImage = ({ mainImages }) => {
                       London Fashion Week
                     </div>
                   )}
+                  <Link href="/projects/st-andrews-links">
+                    <Image
+                      onMouseOver={() => setActiveImage("D")}
+                      width={widthD}
+                      widthImage={activeImage}
+                      className="image"
+                      height="auto"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage4.fields.file.url}
+                      alt={projectImage4.title}
+                    />
+                  </Link>
+                  {activeImage === "D" && (
+                    <div
+                      className="centered"
+                      style={{
+                        left: " 43.75%",
+                      }}
+                    >
+                      St Andrews
+                    </div>
+                  )}
                   <Link href="/projects/abercrombie-and-fitch">
                     <Image
                       onMouseOver={() => setActiveImage("B")}
@@ -111,7 +134,7 @@ const FunImage = ({ mainImages }) => {
                     <div
                       className="centered"
                       style={{
-                        left: " 43.75%",
+                        left: " 56.25%",
                       }}
                     >
                       Abercrombie and fitch
@@ -133,33 +156,10 @@ const FunImage = ({ mainImages }) => {
                     <div
                       className="centered"
                       style={{
-                        left: " 56.25%",
-                      }}
-                    >
-                      Compass PLC
-                    </div>
-                  )}
-                  <Link href="/projects/st-andrews-links">
-                    <Image
-                      onMouseOver={() => setActiveImage("D")}
-                      width={widthD}
-                      widthImage={activeImage}
-                      className="image"
-                      height="auto"
-                      loading="lazy"
-                      data-lazy="true"
-                      src={"https:" + projectImage4.fields.file.url}
-                      alt={projectImage4.title}
-                    />
-                  </Link>
-                  {activeImage === "D" && (
-                    <div
-                      className="centered"
-                      style={{
                         left: " 68.75%",
                       }}
                     >
-                      St Andrews
+                      Compass PLC
                     </div>
                   )}
                 </div>
