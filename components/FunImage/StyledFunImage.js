@@ -34,10 +34,9 @@ export const StyledFunImage = styled.div`
   .centered {
     font: normal normal 24px/40px IBMPlexSans;
     position: absolute;
-    top: 87.5%;
+    top: 90%;
     transform: translate(-50%, -50%);
     color: black;
-    left: 31.25%;
   }
 
   .image {
