@@ -1,7 +1,7 @@
 // import Image from "next/image";
 import { StyledFunImage } from "./StyledFunImage";
 import { createContext, useState, useEffect } from "react";
-import { Image } from "react-bootstrap";
+import { Image, Row } from "react-bootstrap";
 import Link from "next/link";
 import { StyledMarginWraperE } from "../MarginWraperE";
 
@@ -47,74 +47,189 @@ const FunImage = ({ mainImages }) => {
       setWidthD("12.5%");
     }
   }, [activeImage]);
+  const [device, setDevice] = useState("mobile");
+  const deviceCheck = () => {
+    if (window.innerWidth < 576) {
+      setDevice("mobile");
+    } else {
+      setDevice("desktop");
+    }
+  };
+  useEffect(() => {
+    deviceCheck();
+    window.addEventListener("resize", () => {
+      deviceCheck();
+    });
+  }, []);
 
   const { projectImage1, projectImage2, projectImage3, projectImage4 } =
     mainImages.fields;
   return (
     <>
-      <ImageSizer.Provider>
+      {device !== "mobile" ? (
+        <ImageSizer.Provider>
+          <StyledMarginWraperE>
+            <StyledFunImage>
+              <div className="image-holder">
+                <div className="images">
+                  <Link href="/projects/london-fashion-week">
+                    <Image
+                      onMouseOver={() => setActiveImage("A")}
+                      width={widthA}
+                      className="image"
+                      loading="lazy"
+                      data-lazy="true"
+                      height="auto"
+                      src={"https:" + projectImage1.fields.file.url}
+                      alt={projectImage1.title}
+                    />
+                  </Link>
+
+                  {activeImage === "A" && (
+                    <div
+                      className="centered"
+                      style={{
+                        left: " 31.25%",
+                      }}
+                    >
+                      London Fashion Week
+                    </div>
+                  )}
+                  <Link href="/projects/abercrombie-and-fitch">
+                    <Image
+                      onMouseOver={() => setActiveImage("B")}
+                      width={widthB}
+                      height="auto"
+                      className="image"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage2.fields.file.url}
+                      alt={projectImage2.title}
+                    />
+                  </Link>
+                  {activeImage === "B" && (
+                    <div
+                      className="centered"
+                      style={{
+                        left: " 43.75%",
+                      }}
+                    >
+                      Abercrombie and fitch
+                    </div>
+                  )}
+                  <Link href="/projects/compass-plc">
+                    <Image
+                      onMouseOver={() => setActiveImage("C")}
+                      width={widthC}
+                      height="auto"
+                      className="image"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage3.fields.file.url}
+                      alt={projectImage3.title}
+                    />
+                  </Link>
+                  {activeImage === "C" && (
+                    <div
+                      className="centered"
+                      style={{
+                        left: " 56.25%",
+                      }}
+                    >
+                      Compass PLC
+                    </div>
+                  )}
+                  <Link href="/projects/st-andrews-links">
+                    <Image
+                      onMouseOver={() => setActiveImage("D")}
+                      width={widthD}
+                      widthImage={activeImage}
+                      className="image"
+                      height="auto"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage4.fields.file.url}
+                      alt={projectImage4.title}
+                    />
+                  </Link>
+                  {activeImage === "D" && (
+                    <div
+                      className="centered"
+                      style={{
+                        left: " 68.75%",
+                      }}
+                    >
+                      St Andrews
+                    </div>
+                  )}
+                </div>
+              </div>
+            </StyledFunImage>
+          </StyledMarginWraperE>
+        </ImageSizer.Provider>
+      ) : (
         <StyledMarginWraperE>
           <StyledFunImage>
-            <div className="image-holder">
-              <div className="images">
-                <Link href="/projects/london-fashion-week">
-                  <Image
-                    onMouseOver={() => setActiveImage("A")}
-                    width={widthA}
-                    className="image"
-                    loading="lazy"
-                    data-lazy="true"
-                    height="auto"
-                    src={"https:" + projectImage1.fields.file.url}
-                    alt={projectImage1.title}
-                  />
-                </Link>
-
-                {activeImage === "A" && (
+            <div className="image-holder-mobile">
+              <div className="images-mobile">
+                <Row>
+                  <Link href="/projects/london-fashion-week">
+                    <Image
+                      onMouseOver={() => setActiveImage("A")}
+                      width={widthA}
+                      className="image-mobile"
+                      loading="lazy"
+                      data-lazy="true"
+                      height="auto"
+                      src={"https:" + projectImage1.fields.file.url}
+                      alt={projectImage1.title}
+                    />
+                  </Link>
                   <div
                     className="centered"
                     style={{
-                      left: " 31.25%",
+                      left: " 50%",
                     }}
                   >
                     London Fashion Week
                   </div>
-                )}
-                <Link href="/projects/abercrombie-and-fitch">
-                  <Image
-                    onMouseOver={() => setActiveImage("B")}
-                    width={widthB}
-                    height="auto"
-                    className="image"
-                    loading="lazy"
-                    data-lazy="true"
-                    src={"https:" + projectImage2.fields.file.url}
-                    alt={projectImage2.title}
-                  />
-                </Link>
-                {activeImage === "B" && (
+                </Row>
+                <Row>
+                  <Link href="/projects/abercrombie-and-fitch">
+                    <Image
+                      onMouseOver={() => setActiveImage("B")}
+                      width={widthB}
+                      height="auto"
+                      className="image-mobile"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage2.fields.file.url}
+                      alt={projectImage2.title}
+                    />
+                  </Link>
                   <div
                     className="centered"
                     style={{
-                      left: " 43.75%",
+                      left: " 50%",
                     }}
                   >
                     Abercrombie and fitch
                   </div>
-                )}
-                <Link href="/projects/compass-plc">
-                  <Image
-                    onMouseOver={() => setActiveImage("C")}
-                    width={widthC}
-                    height="auto"
-                    className="image"
-                    loading="lazy"
-                    data-lazy="true"
-                    src={"https:" + projectImage3.fields.file.url}
-                    alt={projectImage3.title}
-                  />
-                </Link>
-                {activeImage === "C" && (
+                </Row>
+                <Row>
+                  <Link href="/projects/compass-plc">
+                    <Image
+                      onMouseOver={() => setActiveImage("C")}
+                      width={widthC}
+                      height="auto"
+                      className="image-mobile"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage3.fields.file.url}
+                      alt={projectImage3.title}
+                    />
+                  </Link>
+
                   <div
                     className="centered"
                     style={{
@@ -123,21 +238,20 @@ const FunImage = ({ mainImages }) => {
                   >
                     Compass PLC
                   </div>
-                )}
-                <Link href="/projects/st-andrews-links">
-                  <Image
-                    onMouseOver={() => setActiveImage("D")}
-                    width={widthD}
-                    widthImage={activeImage}
-                    className="image"
-                    height="auto"
-                    loading="lazy"
-                    data-lazy="true"
-                    src={"https:" + projectImage4.fields.file.url}
-                    alt={projectImage4.title}
-                  />
-                </Link>
-                {activeImage === "D" && (
+                </Row>
+                <Row>
+                  <Link href="/projects/st-andrews-links">
+                    <Image
+                      width="100%"
+                      className="image-mobile"
+                      height="auto"
+                      loading="lazy"
+                      data-lazy="true"
+                      src={"https:" + projectImage4.fields.file.url}
+                      alt={projectImage4.title}
+                    />
+                  </Link>
+
                   <div
                     className="centered"
                     style={{
@@ -146,12 +260,12 @@ const FunImage = ({ mainImages }) => {
                   >
                     St Andrews
                   </div>
-                )}
+                </Row>
               </div>
             </div>
           </StyledFunImage>
         </StyledMarginWraperE>
-      </ImageSizer.Provider>
+      )}
     </>
   );
 };

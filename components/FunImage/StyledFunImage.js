@@ -4,6 +4,9 @@ export const StyledFunImage = styled.div`
   /* margin: 0 5vw; */
   padding-top: 64px;
   .image-holder {
+    @media only screen and (max-width: 768px) {
+      max-width: calc(100vw - 0rem);
+    }
     max-width: calc(100vw - 8rem);
     max-height: 85vh;
     box-sizing: content-box;
@@ -33,7 +36,7 @@ export const StyledFunImage = styled.div`
     position: absolute;
     top: 90%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
     left: 31.25%;
   }
 
