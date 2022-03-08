@@ -47,7 +47,7 @@ const Navbar = ({ page }) => {
             <a className="header_projects">PROJECTS</a>
           </Link>
         </li>
-        <li onClick={login}> Login/Signup</li>
+        {/* <li onClick={login}> Login/Signup</li> */}
       </ul>
       {/* </Row> */}
     </StyledHeader>
