@@ -48,8 +48,8 @@ export const StyledLanding = styled.div`
   .buttons {
     position: relative;
     text-align: center;
-    color: black;
-    background-color: white;
-    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
 `;
