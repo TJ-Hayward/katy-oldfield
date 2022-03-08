@@ -38,10 +38,14 @@ export const StyledFunImage = styled.div`
     transform: translate(-50%, -50%);
     color: black;
   }
+  .row > * {
+    object-fit: cover;
+    height: 20vh;
+  }
 
   .image {
-    transition: all 500ms ease;
-
+    /* transition: all 500ms ease; */
+    transition: width 0.35s ease-in-out;
     /* transition: 500ms cubic-bezier(0.29, 0, 0.2, 1); */
     height: 791px;
     object-fit: cover;

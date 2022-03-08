@@ -30,6 +30,7 @@ katy-logo {
 }
 ibm-semi {
   font: normal normal 600 80px/80px IBMPlexSans;
+  font-size: inherit;
 }
 ibm-small {
   font: normal normal 32px/40px IBMPlexSans;

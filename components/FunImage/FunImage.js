@@ -172,11 +172,10 @@ const FunImage = ({ mainImages }) => {
           <StyledFunImage>
             <div className="image-holder-mobile">
               <div className="images-mobile">
-                <Row>
+                <Row className="image-rows">
                   <Link href="/projects/london-fashion-week">
                     <Image
                       onMouseOver={() => setActiveImage("A")}
-                      width={widthA}
                       className="image-mobile"
                       loading="lazy"
                       data-lazy="true"
@@ -194,17 +193,17 @@ const FunImage = ({ mainImages }) => {
                     London Fashion Week
                   </div> */}
                 </Row>
-                <Row>
+                <Row className="image-rows">
                   <Link href="/projects/abercrombie-and-fitch">
                     <Image
                       onMouseOver={() => setActiveImage("B")}
-                      width={widthB}
                       height="auto"
                       className="image-mobile"
                       loading="lazy"
                       data-lazy="true"
                       src={"https:" + projectImage2.fields.file.url}
                       alt={projectImage2.title}
+                      style={{ marginTop: "1rem" }}
                     />
                   </Link>
                   {/* <div
@@ -216,17 +215,17 @@ const FunImage = ({ mainImages }) => {
                     Abercrombie and fitch
                   </div> */}
                 </Row>
-                <Row>
+                <Row className="image-rows">
                   <Link href="/projects/compass-plc">
                     <Image
                       onMouseOver={() => setActiveImage("C")}
-                      width={widthC}
                       height="auto"
                       className="image-mobile"
                       loading="lazy"
                       data-lazy="true"
                       src={"https:" + projectImage3.fields.file.url}
                       alt={projectImage3.title}
+                      style={{ marginTop: "1rem" }}
                     />
                   </Link>
 
@@ -239,16 +238,16 @@ const FunImage = ({ mainImages }) => {
                     Compass PLC
                   </div> */}
                 </Row>
-                <Row>
+                <Row className="image-rows">
                   <Link href="/projects/st-andrews-links">
                     <Image
-                      width="100%"
                       className="image-mobile"
                       height="auto"
                       loading="lazy"
                       data-lazy="true"
                       src={"https:" + projectImage4.fields.file.url}
                       alt={projectImage4.title}
+                      style={{ marginTop: "1rem" }}
                     />
                   </Link>
                   {/* 

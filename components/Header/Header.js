@@ -32,7 +32,7 @@ const Navbar = ({ page }) => {
               <katy-logo>KATY OLDFIELD</katy-logo>
             </Link>
           ) : (
-            <Link href="/">
+            <Link href="/projects">
               <katy-logo>KO</katy-logo>
             </Link>
           )}
