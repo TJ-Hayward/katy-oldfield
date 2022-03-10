@@ -115,7 +115,7 @@ const FunImage = ({ mainImages }) => {
                         left: " 43.75%",
                       }}
                     >
-                      St Andrews
+                      St Andrews Links
                     </div>
                   )}
                   <Link href="/projects/abercrombie-and-fitch">
@@ -137,7 +137,7 @@ const FunImage = ({ mainImages }) => {
                         left: " 56.25%",
                       }}
                     >
-                      Abercrombie and fitch
+                      Abercrombie & Fitch
                     </div>
                   )}
                   <Link href="/projects/compass-plc">
